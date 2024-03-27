@@ -17,7 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "homepage": "https://genron.github.io"
+    "homepage": "https://genron.github.io",
     "start": "react-scripts start",
     "build": "react-scripts docs",
     "test": "react-scripts test",
