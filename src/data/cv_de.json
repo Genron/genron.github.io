@@ -1,6 +1,6 @@
 {
   "title": "Marco Sanfratello",
-  "subtitle": "Fullstack Software Entwickler",
+  "subtitle": "Fullstack Software Engineer",
   "categories": [
     {
       "title": "Persönliche Daten",
@@ -21,7 +21,7 @@
           "title": "Sprachen",
           "content": {
             "__html": [
-              "Deutsch (Mutttersprache)",
+              "Deutsch (Muttersprache)",
               "\n",
               "Englisch (fließend)"
             ]
@@ -35,7 +35,7 @@
         {
           "title": "2019 - heute",
           "content": {
-            "title": "Fullstack Software Entwickler",
+            "title": "Fullstack Software Engineer",
             "__html": "Karakun AG, 4051 Basel"
           }
         }

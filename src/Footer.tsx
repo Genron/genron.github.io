@@ -38,9 +38,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     position: 'absolute',
     bottom: 0,
-    left: 50,
+    left: 60,
     right: 50,
-    padding: '16px 0 20px',
+    padding: '16px 0 30px',
   },
   bold: {
     fontFamily: Font.bold,

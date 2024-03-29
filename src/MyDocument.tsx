@@ -46,11 +46,11 @@ const styles = StyleSheet.create({
     fontFamily: Font.regular,
     color: Color.fontColor,
     backgroundColor: 'white',
-    padding: '60px 50px',
+    padding: '70px 50px 70px 60px',
     fontSize: Size.p,
   },
   category: {
-    padding: '18px 0px',
+    padding: '18px 0px 0px',
   },
   categoryContainer: {
     display: 'flex',
