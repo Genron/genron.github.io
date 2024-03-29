@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.css';
 import {MyDocument} from "./MyDocument";
-import {PDFViewer} from '@react-pdf/renderer';
-import * as data from "./data/data_de.json";
+import {PDFViewer, PDFDownloadLink} from '@react-pdf/renderer';
 
 function App() {
   return (
     <div style={{
-      width: '99vw',
-      height: '99vh',
+      height: '100vh'
     }}>
-      <PDFViewer width={"100%"} height={"100%"}>
-        <MyDocument message={JSON.stringify(data, null, 4).substring(0, 2000)} />
+      <PDFViewer width={"99.5%"} height={"99%"}>
+        <MyDocument />
       </PDFViewer>
     </div>
   );

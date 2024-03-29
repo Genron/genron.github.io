@@ -1,4 +1,25 @@
 export interface CV {
+  title: string;
+  subtitle: string;
+  categories: Category[];
+}
+
+export interface Category {
+  title: string;
+  entries: CategoryEntry[];
+}
+
+export interface CategoryEntry {
+  title: string;
+  content: CategoryEntryContent;
+}
+
+export interface CategoryEntryContent {
+  title?: string;
+  __html: string | string[];
+}
+
+export interface CV_gen {
   id:          number;
   version:     number;
   state:       string;
@@ -8,16 +29,16 @@ export interface CV {
   lastname:    string;
   position:    string;
   address:     string;
-  birthdate:   Date;
+  birthdate:   string; // Date;
   nationality: string;
   hobbies:     null;
   mobile:      string;
   email:       string;
-  homepage:    string;
-  github:      string;
+  homepage:    null; // string;
+  github:      null; // string;
   linkedin:    string;
-  twitter:     string;
-  quote:       string;
+  twitter:     null;
+  quote:       null;
   experience:  Experience[];
   projects:    Project[];
   education:   Education[];
@@ -26,7 +47,7 @@ export interface CV {
   trainings:   Training[];
   picture:     string;
   languages:   string[];
-  default?:    CV;
+  default?:    CV_gen;
 }
 
 export interface Education {
@@ -39,7 +60,7 @@ export interface Education {
 
 export interface Experience {
   company:     string;
-  position:    Position;
+  position:    string; // Position;
   description: any[];
   location:    string;
   time:        string;
@@ -52,7 +73,7 @@ export enum Position {
 }
 
 export interface Project {
-  role:         Position;
+  role:         string; // Position;
   customer:     string;
   location:     string;
   time:         string;

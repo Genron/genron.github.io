@@ -1,0 +1,65 @@
+{
+  "title": "Marco Sanfratello",
+  "subtitle": "Fullstack Software Entwickler",
+  "categories": [
+    {
+      "title": "Persönliche Daten",
+      "entries": [
+        {
+          "title": "Geburtsdatum",
+          "content": {
+            "__html": "14.09.1994"
+          }
+        },
+        {
+          "title": "Nationalität",
+          "content": {
+            "__html": "Schweizer"
+          }
+        },
+        {
+          "title": "Sprachen",
+          "content": {
+            "__html": [
+              "Deutsch (Mutttersprache)",
+              "\n",
+              "Englisch (fließend)"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Beruflicher Werdegang",
+      "entries": [
+        {
+          "title": "2019 - heute",
+          "content": {
+            "title": "Fullstack Software Entwickler",
+            "__html": "Karakun AG, 4051 Basel"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Projekte",
+      "entries": []
+    },
+    {
+      "title": "Kenntnisse",
+      "entries": []
+    },
+    {
+      "title": "Vorträge",
+      "entries": []
+    },
+    {
+      "title": "Weiterbildungen",
+      "entries": []
+    },
+    {
+      "title": "Ausbildung",
+      "entries": []
+    }
+  ]
+}
