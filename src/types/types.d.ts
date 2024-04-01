@@ -16,7 +16,7 @@ export interface CategoryEntry {
 
 export interface CategoryEntryContent {
   title?: string;
-  __html: string | string[];
+  __html: string[];
 }
 
 export interface CV_gen {

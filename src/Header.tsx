@@ -13,7 +13,7 @@ export function Header(props: Props) {
   const styles = getStyles(props);
   return (
     <View style={styles.header}>
-      <Avatar image={props.image} size={84} border={0.5}/>
+      <Avatar image={props.image} size={94} border={0.5}/>
       <View style={styles.headerDetails}>
         <Text style={styles.title}>{props.title}</Text>
         <Text style={styles.subtitle}>{props.subtitle}</Text>
@@ -27,6 +27,8 @@ function getStyles(props: Props) {
     header: {
       display: 'flex',
       flexDirection: 'row',
+      minHeight: '95px',
+      margin: '0 0 25px',
     },
     headerDetails: {
       padding: '0 0 0 25px',

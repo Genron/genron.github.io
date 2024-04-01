@@ -5,24 +5,24 @@ export function Footer() {
   return (
     <View fixed style={styles.footer}>
       <Text style={styles.bold}>Marco Sanfratello</Text>
-      <View style={styles.separator}/>
 
-      <Text>Trottmattstrasse 22</Text>
-      <View style={styles.separator}/>
+      {/*<View style={styles.separator}/>*/}
+      {/*<Text>Trottmattstrasse 22</Text>*/}
 
-      <Text>5242 Lupfig</Text>
-      <View style={styles.separator}/>
+      {/*<View style={styles.separator}/>*/}
+      {/*<Text>5242 Lupfig</Text>*/}
 
+      <View style={styles.separator}/>
       <Text style={styles.icon}>T</Text>
       <Text>+41 78 837 05 06</Text>
-      <View style={styles.separator}/>
 
+      <View style={styles.separator}/>
       <Text style={styles.icon}>E</Text>
       <Text>sanfratello.m@gmail.com</Text>
-      <View style={styles.separator}/>
 
-      <Text style={styles.icon}>W</Text>
-      <Link src={'https://genron.github.io'}>genron.github.io</Link>
+      {/*<View style={styles.separator}/>*/}
+      {/*<Text style={styles.icon}>W</Text>*/}
+      {/*<Link src={'https://genron.github.io'}>genron.github.io</Link>*/}
 
       <Text style={styles.pageNr} render={({pageNumber, totalPages}) => (
         `${pageNumber}/${totalPages}`
