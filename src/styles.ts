@@ -1,9 +1,9 @@
 import {StyleSheet} from "@react-pdf/renderer";
 
 export const Color = {
-  primary: '#2f90b4',
+  primary: '#1e7c9f',
   secondary: '#a22fb4',
-  fontColor: '#373e41',
+  fontColor: '#363b3d',
 }
 export const Font = {
   regular: 'Helvetica',

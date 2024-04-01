@@ -10,17 +10,16 @@ import {Footer} from "./Footer";
 
 const cv: CV = cv_de;
 
-// Create Document Component
 export function MyDocument() {
   return (
-    <Document>
+    <Document title={'CV Sanfratello Marco'} author={'Marco Sanfratello'}>
       <Page size="A4" style={styles.page}>
         <Header image={me} title={cv.title} subtitle={cv.subtitle}/>
         {cv.categories.map((c) => (
           <View key={c.title} style={styles.category}>
             <View style={styles.categoryContainer}>
               <Text style={styles.categoryTitle}>{c.title}</Text>
-              <View style={styles.separator} />
+              <View style={styles.separator}/>
             </View>
             {c.entries.map((e) => (
               <View key={e.title} style={styles.entry}>
@@ -35,7 +34,7 @@ export function MyDocument() {
             ))}
           </View>
         ))}
-        <Footer />
+        <Footer/>
       </Page>
     </Document>
   );
