@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from "@react-pdf/renderer";
+import {Link, StyleSheet, Text, View} from "@react-pdf/renderer";
 import {Color, Font} from "./styles";
 
 export function Footer() {
@@ -20,9 +20,9 @@ export function Footer() {
       <Text style={styles.icon}>E</Text>
       <Text>sanfratello.m@gmail.com</Text>
 
-      {/*<View style={styles.separator}/>*/}
-      {/*<Text style={styles.icon}>W</Text>*/}
-      {/*<Link src={'https://genron.github.io'}>genron.github.io</Link>*/}
+      <View style={styles.separator}/>
+      <Text style={styles.icon}>W</Text>
+      <Link src={'https://genron.github.io'}>genron.github.io</Link>
 
       <Text style={styles.pageNr} render={({pageNumber, totalPages}) => (
         `${pageNumber}/${totalPages}`
