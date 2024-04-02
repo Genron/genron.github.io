@@ -1,5 +1,3 @@
-import {StyleSheet} from "@react-pdf/renderer";
-
 export const Color = {
   primary: '#1e7c9f',
   secondary: '#a22fb4',
