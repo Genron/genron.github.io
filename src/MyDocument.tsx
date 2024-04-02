@@ -1,6 +1,6 @@
 import React from 'react';
 import {Document, Link, Page, StyleSheet, Text, View} from '@react-pdf/renderer';
-import _cv_de from "./data/cv_de.json";
+//import _cv_de from "./data/cv_de.json";
 import _cv_en from "./data/cv_en.json";
 import {CV} from "./types/types";
 import {Header} from "./Header";
@@ -9,7 +9,7 @@ import me from './data/me.jpg';
 import {Color, Font, Size} from "./styles";
 import {Footer} from "./Footer";
 
-const cv_de: CV = _cv_de;
+//const cv_de: CV = _cv_de;
 const cv_en: CV = _cv_en;
 
 export function MyDocument() {
@@ -36,8 +36,8 @@ export function MyDocument() {
                   )}
                   {e.content.__html.map(t => {
                     if (t.startsWith('<a')) {
-                      const [_, link, text] = t.match(/^<a href='(.+)'>(.*)<\/a>$/) as string[];
-                      return <Link key={t} src={link} style={styles.entryContent}>{text}</Link>;
+                      const match = t.match(/^<a href='(.+)'>(.*)<\/a>$/) as string[];
+                      return <Link key={t} src={match[1]} style={styles.entryContent}>{match[2]}</Link>;
                     } else {
                       return <Text key={t} style={styles.entryContent}>{t}</Text>;
                     }

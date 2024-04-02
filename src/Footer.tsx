@@ -1,5 +1,5 @@
-import {Link, StyleSheet, Text, View} from "@react-pdf/renderer";
-import {Color, Font, Size} from "./styles";
+import {StyleSheet, Text, View} from "@react-pdf/renderer";
+import {Color, Font} from "./styles";
 
 export function Footer() {
   return (
