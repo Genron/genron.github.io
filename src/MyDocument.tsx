@@ -1,6 +1,6 @@
 import React from 'react';
 import {Document, Link, Page, StyleSheet, Text, View} from '@react-pdf/renderer';
-//import _cv_de from "./data/cv_de.json";
+import _cv_de from "./data/cv_de.json";
 import _cv_en from "./data/cv_en.json";
 import {CV} from "./types/types";
 import {Header} from "./Header";
@@ -8,13 +8,17 @@ import {Header} from "./Header";
 import me from './data/me.jpg';
 import {Color, Font, Size} from "./styles";
 import {Footer} from "./Footer";
+import {Lang, Language} from "./App";
 
-//const cv_de: CV = _cv_de;
+const cv_de: CV = _cv_de;
 const cv_en: CV = _cv_en;
 
-export function MyDocument() {
-  // const cv = cv_de;
-  const cv = cv_en;
+interface Props {
+  lang: Lang;
+}
+
+export function MyDocument({lang}: Props) {
+  const cv = lang === Language.EN ? cv_en : cv_de;
   return (
     <Document title={'CV Sanfratello Marco'} author={'Marco Sanfratello'}>
       <Page size="A4" style={styles.page}>
