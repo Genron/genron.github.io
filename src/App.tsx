@@ -48,7 +48,7 @@ function App() {
     <Container fluid>
       <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">Marco Sanfratello</Navbar.Brand>
+          <Navbar.Text>Marco Sanfratello</Navbar.Text>
           <Navbar.Toggle/>
           <Navbar.Collapse className="justify-content-end">
             <Nav>
