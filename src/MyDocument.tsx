@@ -20,7 +20,7 @@ interface Props {
 export function MyDocument({lang}: Props) {
   const cv = lang === Language.EN ? cv_en : cv_de;
   return (
-    <Document title={'CV Sanfratello Marco'} author={'Marco Sanfratello'}>
+    <Document title={lang.fileName} author={'Marco Sanfratello'}>
       <Page size="A4" style={styles.page}>
         <Header image={me} title={cv.title} subtitle={cv.subtitle}/>
         {cv.categories.map((c) => (
