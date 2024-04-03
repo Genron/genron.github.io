@@ -6,6 +6,14 @@
       "title": "Personal data",
       "entries": [
         {
+          "title": "In short",
+          "content": {
+            "__html": [
+              "Thanks to my good understanding, I can quickly and independently handle complex tasks. By collaborating with other developers, I can continually grow and learn new things. As a Fullstack Software Engineer with React and Spring skills, I can be deployed effectively. I'm always eager for new challenges."
+            ]
+          }
+        },
+        {
           "title": "Birthdate",
           "content": {
             "__html": [
@@ -37,14 +45,6 @@
               "- Swimming, running, hiking",
               "- Board- and videogames",
               "- drawing"
-            ]
-          }
-        },
-        {
-          "title": "In short",
-          "content": {
-            "__html": [
-              "Thanks to my good understanding, I can quickly and independently handle complex tasks. By collaborating with other developers, I can continually grow and learn new things. As a Fullstack Software Engineer with React and Spring skills, I can be deployed effectively. I'm always eager for new challenges."
             ]
           }
         },
@@ -106,7 +106,7 @@
           "title": "Frameworks and Web",
           "content": {
             "__html": [
-              "HTML, CSS/SCSS, React/Redux, Vaadin, Angular, Vue.js, Node/Express, SpringBoot/MVC, JavaFX, Swing, Thymeleaf, Wordpress, Grails, Material Design, Bootstrap"
+              "React/Redux, Vaadin, Angular, Vue.js, Node/Express, SpringBoot/MVC, JavaFX, Swing, Thymeleaf, HTML, CSS/SCSS, Wordpress, Grails, Material Design, Bootstrap"
             ]
           }
         },
@@ -176,7 +176,7 @@
           "content": {
             "title": "Software Architecture (CPSAF iSAQB®)",
             "__html": [
-              "Workshop: Certified Professional for Software Architecture Foundation Level (Certificate pending)"
+              "Workshop, Certified Professional for Software Architecture Foundation Level (Certificate pending)"
             ]
           }
         },
@@ -185,7 +185,7 @@
           "content": {
             "title": "Python",
             "__html": [
-              "CodeCamp Project: Internal Training (Karakun AG)"
+              "CodeCamp project, internal training (Karakun AG)"
             ]
           }
         },
@@ -194,7 +194,7 @@
           "content": {
             "title": "Vue.js",
             "__html": [
-              "CodeCamp Project: Internal Training (Karakun AG)"
+              "CodeCamp project, internal training (Karakun AG)"
             ]
           }
         },
@@ -203,7 +203,7 @@
           "content": {
             "title": "Kubernetes and OpenShift",
             "__html": [
-              "Workshop: Internal Training (Karakun AG)"
+              "Workshop, internal training (Karakun AG)"
             ]
           }
         },
@@ -212,7 +212,7 @@
           "content": {
             "title": "NLP (Natural Language Processing)",
             "__html": [
-              "Workshop: Internal Training (Karakun AG)"
+              "Workshop, internal training (Karakun AG)"
             ]
           }
         },
@@ -221,7 +221,7 @@
           "content": {
             "title": "TestFX",
             "__html": [
-              "Workshop: Attended at JavaFx-Days"
+              "Workshop, attended at JavaFx-Days"
             ]
           }
         },
@@ -230,7 +230,7 @@
           "content": {
             "title": "Gluon",
             "__html": [
-              "Workshop: Attended at JavaFx-Days"
+              "Workshop, attended at JavaFx-Days"
             ]
           }
         }
