@@ -58,12 +58,12 @@ function App() {
       </Navbar>
       <Container className={'main'}>
         <Row>
-          <Col lg={4} md={12}>
+          <Col lg={3} md={12}>
             <div className={'avatar g-sticky-top'}>
               <img src={me} alt={'This is me'}/>
             </div>
           </Col>
-          <Col lg={8} md={12}>
+          <Col lg={9} md={12}>
             <CVTabs cv={cv} key={selectedLanguage.lang}/>
           </Col>
         </Row>
