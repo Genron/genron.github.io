@@ -6,6 +6,14 @@
       "title": "Persönliche Daten",
       "entries": [
         {
+          "title": "Kurz und knapp",
+          "content": {
+            "__html": [
+              "Dank guter Auffassungsgabe kann ich komplexe Aufgaben schnell und selbständig bearbeiten. Durch die Zusammenarbeit mit anderen Entwicklern kann ich mich stets weiterentwickeln und Neues lernen. Als Fullstack Software Engineer mit React- und Spring kann man mich sehr gut einsetzen. Für neue Herausforderungen bin ich stets bereit."
+            ]
+          }
+        },
+        {
           "title": "Geburtsdatum",
           "content": {
             "__html": [
@@ -37,14 +45,6 @@
               "- Schwimmen, Joggen, Wandern",
               "- Brett- und Videospiele",
               "- Zeichnen"
-            ]
-          }
-        },
-        {
-          "title": "Kurz und knapp",
-          "content": {
-            "__html": [
-              "Dank guter Auffassungsgabe kann ich komplexe Aufgaben schnell und selbständig bearbeiten. Durch die Zusammenarbeit mit anderen Entwicklern kann ich mich stets weiterentwickeln und Neues lernen. Als Fullstack Software Engineer mit React- und Spring kann man mich sehr gut einsetzen. Auf neue Herausforderungen bin ich immer gespannt."
             ]
           }
         },
@@ -106,7 +106,7 @@
           "title": "Frameworks und Web",
           "content": {
             "__html": [
-              "HTML, CSS/SCSS, React/Redux, Vaadin, Angular, Vue.js, Node/Express, SpringBoot/MVC, JavaFX, Swing, Thymeleaf, Wordpress, Grails, Material Design, Bootstrap"
+              "React/Redux, Vaadin, Angular, Vue.js, Node/Express, SpringBoot/MVC, JavaFX, Swing, Thymeleaf, HTML, CSS/SCSS, Wordpress, Grails, Material Design, Bootstrap"
             ]
           }
         },
@@ -362,7 +362,7 @@
           "content": {
             "title": "Bachelor Thesis: WorkbenchFX - FHNW",
             "__html": [
-              "Entwicklung eines open source RCP framework für einfache Erstellung von Modul-basierten JavaFX Applikationen",
+              "Entwicklung eines open source RCP Frameworks für die einfache Erstellung von Modul-basierten JavaFX Applikationen",
               "Technologien: Java 8, JavaFX, Maven, GitHub, Travis CI, JUnit, Mockito, TestFX, Spock, Groovy, AsciiDoctor, Log4j, Material Design, SCSS",
               "<a href='https://github.com/dlsc-software-consulting-gmbh/WorkbenchFX'>WorkbenchFX</a>"
             ]
@@ -373,7 +373,7 @@
           "content": {
             "title": "Projekt 5: PreferencesFX - FHNW",
             "__html": [
-              "Entwicklung einer open source JavaFX library für die einfache Erstellung von Einstellungsdialogen",
+              "Entwicklung einer open source JavaFX Library für die einfache Erstellung von Einstellungsdialogen",
               "Technologien: Java 8, JavaFX, Gradle, Maven, GitHub, Travis CI, JUnit, Mockito, AsciiDoctor, Log4j",
               "<a href='https://github.com/dlsc-software-consulting-gmbh/PreferencesFX'>PreferencesFX</a>"
             ]
