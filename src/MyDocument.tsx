@@ -1,28 +1,23 @@
 import React from 'react';
 import {Document, Link, Page, StyleSheet, Text, View} from '@react-pdf/renderer';
-import _cv_de from "./data/cv_de.json";
-import _cv_en from "./data/cv_en.json";
 import {CV} from "./types/types";
 import {Header} from "./Header";
 
-import me from './data/me.jpg';
 import {Color, Font, Size} from "./styles";
 import {Footer} from "./Footer";
-import {Lang, Language} from "./App";
-
-const cv_de: CV = _cv_de;
-const cv_en: CV = _cv_en;
+import {Lang} from "./App";
 
 interface Props {
   lang: Lang;
+  cv: CV;
+  avatar: string;
 }
 
-export function MyDocument({lang}: Props) {
-  const cv = lang === Language.EN ? cv_en : cv_de;
+export function MyDocument({cv, lang, avatar}: Props) {
   return (
-    <Document title={lang.fileName} author={'Marco Sanfratello'}>
+    <Document title={lang.filename} author={'Marco Sanfratello'}>
       <Page size="A4" style={styles.page}>
-        <Header image={me} title={cv.title} subtitle={cv.subtitle}/>
+        <Header image={avatar} title={cv.title} subtitle={cv.subtitle}/>
         {cv.categories.map((c) => (
           <View key={c.title} style={styles.category}>
             <View style={styles.categoryHeader} wrap={false}>

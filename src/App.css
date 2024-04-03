@@ -1,5 +1,5 @@
 div.avatar {
-    margin: auto;
+    margin: 0 auto 2rem;
     max-width: 350px;
     overflow: hidden;
     aspect-ratio: 1 / 1;
@@ -11,10 +11,10 @@ div.avatar > img {
     transform: translateY(-10%);
 }
 
-.sticky-top {
+.g-sticky-top {
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 1;
 }
 
 .bg-white {
