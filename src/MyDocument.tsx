@@ -1,16 +1,42 @@
 import React from 'react';
-import {Document, Link, Page, StyleSheet, Text, View} from '@react-pdf/renderer';
+import {Document, Link, Page, PDFViewer, StyleSheet, Text, View} from '@react-pdf/renderer';
 import {CV} from "./types/types";
 import {Header} from "./Header";
 
 import {Color, Font, Size} from "./styles";
 import {Footer} from "./Footer";
-import {Lang} from "./App";
+import {Lang, Language} from "./App";
 
+import _cv_de from "./data/cv_de.json";
+import _cv_en from "./data/cv_en.json";
+import me from './data/me.jpg';
+import {useLanguageLocation} from "./services/utis";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+
+const cv_de: CV = _cv_de;
+const cv_en: CV = _cv_en;
 interface Props {
   lang: Lang;
   cv: CV;
   avatar: string;
+}
+
+export function MyDocument1() {
+  const lang = useLanguageLocation(Language.EN);
+  const cv = lang === Language.EN ? cv_en : cv_de;
+  return (
+    <Container>
+      <Row>
+        <Col>
+          <PDFViewer width={'100%'} height={'100%'} style={{ minHeight: '99vh' }}>
+            <MyDocument avatar={me} cv={cv} lang={lang} />
+          </PDFViewer>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
 
 export function MyDocument({cv, lang, avatar}: Props) {

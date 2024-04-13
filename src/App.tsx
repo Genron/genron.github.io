@@ -35,7 +35,7 @@ export const Language: { [key: string]: Lang } = {
 }
 
 function App() {
-  const defaultLanguage = useLanguageLocation();
+  const defaultLanguage = useLanguageLocation(Language.EN);
   const [selectedLanguage, setSelectedLanguage] = useState<Lang>(defaultLanguage);
   const cv = selectedLanguage === Language.EN ? cv_en : cv_de;
 

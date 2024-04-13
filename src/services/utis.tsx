@@ -40,7 +40,7 @@ function useLocation(): LocationMap {
     }, {});
 }
 
-export function useLanguageLocation(lang: Lang = Language.EN) {
+export function useLanguageLocation(lang: Lang) {
   const map = useLocation();
   if (map.l) {
     return Language[map.l.toUpperCase()] || lang;
