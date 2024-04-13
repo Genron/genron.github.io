@@ -12,9 +12,9 @@ export function Footer() {
       {/*<View style={styles.separator}/>*/}
       {/*<Text>5242 Lupfig</Text>*/}
 
-      <View style={styles.separator}/>
-      <Text style={styles.icon}>T</Text>
-      <Text>+41 78 837 05 06</Text>
+      {/*<View style={styles.separator}/>*/}
+      {/*<Text style={styles.icon}>T</Text>*/}
+      {/*<Text>+41 78 837 05 06</Text>*/}
 
       <View style={styles.separator}/>
       <Text style={styles.icon}>E</Text>
