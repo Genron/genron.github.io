@@ -3,18 +3,24 @@
   "subtitle": "Fullstack Software Engineer",
   "categories": [
     {
-      "title": "Personal data",
+      "title": "Personal Information",
       "entries": [
         {
-          "title": "In short",
+          "title": "Briefly",
           "content": {
             "__html": [
-              "Thanks to my good comprehension, I can quickly and independently handle complex tasks. By collaborating with other developers, I can continually grow and learn new things. As a Fullstack Software Engineer with React and Spring skills, I can be deployed effectively. I'm always eager for new challenges."
+              "Thanks to my good comprehension, I can quickly and independently handle complex tasks.",
+              "Good collaboration with other team members is important to me because a good atmosphere is key to success from one perspective.",
+              "Furthermore, it allows me to continue developing and learning more. That's why development processes like merge requests, retrospectives, and the occasional team event are very important to me.",
+              "",
+              "In my current company, I have been involved in many different projects with various technology stacks. As a result, I have gained a lot of experience in a short time and am flexible when it comes to new technologies/projects and versatile in their use.",
+              "",
+              "As a Fullstack Software Engineer with a focus on React/Spring, I can be used most effectively. But as I said before: I'm always ready for new challenges."
             ]
           }
         },
         {
-          "title": "Birthdate",
+          "title": "Date of Birth",
           "content": {
             "__html": [
               "14.09.1994"
@@ -33,7 +39,7 @@
           "title": "Languages",
           "content": {
             "__html": [
-              "- German (mother tongue)",
+              "- German (native)",
               "- English (fluent)"
             ]
           }
@@ -42,9 +48,9 @@
           "title": "Hobbies",
           "content": {
             "__html": [
-              "- Swimming, running, hiking",
-              "- Board- and videogames",
-              "- drawing"
+              "- Swimming, Jogging, Hiking",
+              "- Board and Video Games",
+              "- Drawing"
             ]
           }
         },
@@ -52,7 +58,7 @@
           "title": "References",
           "content": {
             "__html": [
-              "Available upon request."
+              "Available upon request"
             ]
           }
         }
@@ -62,7 +68,7 @@
       "title": "Professional Experience",
       "entries": [
         {
-          "title": "2019 - present",
+          "title": "2019 - Present",
           "content": {
             "title": "Fullstack Software Engineer",
             "__html": [
@@ -73,19 +79,19 @@
         {
           "title": "2015 - 2019",
           "content": {
-            "title": "Studium",
+            "title": "Studies",
             "__html": [
-              "Bachelor of Computer Science with specialization in Design and Management (iCompetence) at FHNW University of Applied Sciences Northwestern Switzerland, Windisch, Switzerland"
+              "Bachelor of Computer Science with specialization in Design and Management (iCompetence) at FHNW University of Applied Sciences and Arts Northwestern Switzerland, Windisch, Switzerland"
             ]
           }
         },
         {
-          "title": "pre 2015",
+          "title": "Before 2015",
           "content": {
-            "title": "Highschool and apprenticeship",
+            "title": "Upper Secondary School and Initial Training",
             "__html": [
               "- Apprenticeship as a Polymechanic EFZ",
-              "- Completion of Bezirksschule Brugg"
+              "- District School Certificate"
             ]
           }
         }
@@ -95,7 +101,7 @@
       "title": "Skills",
       "entries": [
         {
-          "title": "Programming languages",
+          "title": "Programming Languages",
           "content": {
             "__html": [
               "Java, JavaScript/TypeScript, Haskell, Python"
@@ -143,7 +149,7 @@
           }
         },
         {
-          "title": "KI / BigData",
+          "title": "AI / BigData",
           "content": {
             "__html": [
               "Machine Learning, ElasticSearch"
@@ -151,7 +157,7 @@
           }
         },
         {
-          "title": "Version-Control",
+          "title": "Version Control",
           "content": {
             "__html": [
               "Git, SVN"
@@ -172,6 +178,17 @@
       "title": "Further Education and Certificates",
       "entries": [
         {
+          "title": "2024",
+          "content": {
+            "title": "Software Architecture Focus",
+            "__html": [
+              "- In-depth analysis of layered, onion, and hexagon architectures, their advantages and disadvantages, and when they are suitable for a project.",
+              "- How to use ArchUnit to enforce architectural decisions.",
+              "CodeCamp project, Internal training (Karakun AG)"
+            ]
+          }
+        },
+        {
           "title": "2023",
           "content": {
             "title": "Software Architecture (CPSAF iSAQB®)",
@@ -185,7 +202,7 @@
           "content": {
             "title": "Python",
             "__html": [
-              "CodeCamp project, internal training (Karakun AG)"
+              "CodeCamp project, Internal training (Karakun AG)"
             ]
           }
         },
@@ -194,7 +211,7 @@
           "content": {
             "title": "Vue.js",
             "__html": [
-              "CodeCamp project, internal training (Karakun AG)"
+              "CodeCamp project, Internal training (Karakun AG)"
             ]
           }
         },
@@ -203,7 +220,7 @@
           "content": {
             "title": "Kubernetes and OpenShift",
             "__html": [
-              "Workshop, internal training (Karakun AG)"
+              "Workshop, Internal training (Karakun AG)"
             ]
           }
         },
@@ -212,7 +229,7 @@
           "content": {
             "title": "NLP (Natural Language Processing)",
             "__html": [
-              "Workshop, internal training (Karakun AG)"
+              "Workshop, Internal training (Karakun AG)"
             ]
           }
         },
@@ -221,7 +238,7 @@
           "content": {
             "title": "TestFX",
             "__html": [
-              "Workshop, attended at JavaFx-Days"
+              "Workshop, Participated in the JavaFx Days"
             ]
           }
         },
@@ -229,23 +246,25 @@
           "title": "2018",
           "content": {
             "title": "Gluon",
+
+
             "__html": [
-              "Workshop, attended at JavaFx-Days"
+              "Workshop, Participated in the JavaFx Days"
             ]
           }
         }
       ]
     },
     {
-      "title": "Talks",
+      "title": "Presentations",
       "entries": [
         {
           "title": "2019 - 2020",
           "content": {
             "title": "WorkbenchFX",
             "__html": [
-              "Introduction to WorkbenchFX with additional workshop",
-              "Semi-annual Guest Lecture at FHNW",
+              "Introduction to WorkbenchFX with an additional workshop",
+              "Biannual guest lecture at FHNW",
               "<a href='https://github.com/dlsc-software-consulting-gmbh/WorkbenchFX'>WorkbenchFX</a>"
             ]
           }
@@ -271,7 +290,14 @@
           "content": {
             "title": "Dreyfus Söhne & Cie AG, Basel",
             "__html": [
-              "Independent maintenance and further development of internal banking applications. External contractor and part of the internal team",
+              "Independent maintenance and further development of the bank's internal applications",
+              "Highlights:",
+              "- Dealing with legacy applications",
+              "- Writing batch jobs",
+              "- Extending existing database structures",
+              "- Requirements engineering and collaboration with business personnel",
+              "- Migrations and version upgrades",
+              "Role: Supporting the bank's internal team as an external employee (fullstack)",
               "Technologies: JavaFX, Swing, IBM DB2"
             ]
           }
@@ -279,40 +305,57 @@
         {
           "title": "2023",
           "content": {
-            "title": "eMWA - Canton Aargau",
+            "title": "eMWA - Canton of Aargau",
             "__html": [
-              "Development of a new application. Part of an internal team for an external client",
-              "Technologies: React, Spring/Spring Boot, PostgresSQL, Docker, Typescript, Java"
+              "Development of the 'Electronic Added Value Tax' application as part of a digitalization project for the Canton of Aargau",
+              "Highlights:",
+              "- Independent design and implementation of the module that communicates with the 'iGeko' interface",
+              "- Integration with a new API",
+              "Role: Supporting the development team as a backend engineer",
+              "Technologies: React, Spring/Spring Boot, PostgreSQL, Docker, TypeScript, Java"
             ]
           }
         },
         {
           "title": "2022 - 2023",
           "content": {
-            "title": "BamoWeb - Canton Aargau",
+            "title": "BamoWeb - Canton of Aargau",
             "__html": [
-              "Development of a new application as part of an internal team serving an external client",
-              "Technologies: React, Spring/Spring Boot, Docker, Microsoft SQL Server, Typescript, Java"
+              "Development of the 'BamoWeb' application as part of a digitalization project for the Canton of Aargau",
+              "Highlights:",
+              "- Rapid familiarization with the existing project to ensure its completion",
+              "Role: Supporting the project's completion as part of the development team (Fullstack Engineer)",
+              "Technologies: React, Spring/Spring Boot, Docker, Microsoft SQL Server, TypeScript, Java"
             ]
           }
         },
         {
           "title": "2021 - 2023",
           "content": {
-            "title": "ePlanung - Canton Aargau",
+            "title": "ePlanung - Canton of Aargau",
             "__html": [
-              "Lead Frontend-Engineer. Development of a new application as part of a 2-person internal team serving an external client",
-              "Technologies: React, Spring/Spring Boot, MongoDB, Docker, Typescript, Java"
+              "Development of the 'ePlanung' application as part of a digitalization project for the Canton of Aargau",
+              "Previously, building permits from municipalities and the canton were managed in paper form. This is now to be done digitally. The application digitizes the entire workflow and simplifies the work.",
+              "Highlights:",
+              "- Independent design of the frontend architecture",
+              "- Played a key role with significant responsibility as part of a 2-person team",
+              "Role: Lead Frontend Engineer as part of a 2-person team",
+              "Technologies: React, Spring/Spring Boot, MongoDB, Docker, TypeScript, Java"
             ]
           }
         },
         {
           "title": "2021",
           "content": {
-            "title": "PharmaTalents.AI",
+            "title": "PharmaTalent.AI",
             "__html": [
-              "Lead Frontend-Engineer. Proof of Concept for a new application development. Part of a 2-person internal team serving an external client",
-              "Technologies: React, Spring/Spring Boot"
+              "Proof of concept for the development of an application",
+              "The aim is to quickly and efficiently filter medical articles from a comprehensive data source. The Karakun software 'HIBU' and an external API providing the necessary data are used for this purpose.",
+              "Highlights:",
+              "- Working with large datasets over the web",
+              "- Integration with and utilization of a new API",
+              "Role: Fullstack Engineer with frontend responsibility as part of a 2-person team",
+              "Technologies: React, Spring/Spring Boot, Hibu (Karakun AG product)"
             ]
           }
         },
@@ -321,8 +364,14 @@
           "content": {
             "title": "CVS engineering GmbH",
             "__html": [
-              "Automatic classification and extraction of text content from invoices. Part of an internal team serving an external client",
-              "Technologies: Spring/Spring Boot, Apache UIMA, Hibu (Product of Karakun AG)"
+              "Automatic classification and extraction of text content from invoices",
+              "To minimize repetitive manual work, text information is to be automatically classified and extracted from order confirmations and invoices.",
+              "Highlights:",
+              "- Use of a new scripting language",
+              "- Rule-based detection, classification, and extraction of information from a document",
+              "- Table detection",
+              "Role: Part of the development team as a backend engineer",
+              "Technologies: Spring/Spring Boot, Apache UIMA, Hibu (Karakun AG product)"
             ]
           }
         },
@@ -331,7 +380,7 @@
           "content": {
             "title": "Sprouts GmbH",
             "__html": [
-              "Maintenance and migration of an existing external application. Part of an internal team serving an external client",
+              "Maintenance and migration of an existing external application. Part of an internal team for an external client",
               "Technologies: Docker, Vaadin, JavaFX, GitHub"
             ]
           }
@@ -341,7 +390,7 @@
           "content": {
             "title": "Swiss National Bank, SNB",
             "__html": [
-              "Proof of Concept for creating web components using various technologies. Part of a 2-person internal team serving an external client",
+              "Proof of concept regarding the creation of web components using various technologies. Part of a 2-person internal team for an external client",
               "Technologies: Angular 9/10, Vaadin, SpringBoot, Node, Maven, Java11, JavaScript"
             ]
           }
@@ -351,8 +400,8 @@
           "content": {
             "title": "Covalo - Clariant",
             "__html": [
-              "Development of a new application. Part of an internal team serving an external client",
-              "Technologies: React, Spring Boot, CSS/SASS/LESS, TypeScript, JavaScript, Java, Docker, ElasticSearch, JUnit, Hibu (Product of Karakun AG), Thymeleaf, OpenIDConnect, Spring Security",
+              "Development of an application. Part of an internal team for an external client",
+              "Technologies: React, Spring Boot, CSS/SASS/LESS, TypeScript, JavaScript, Java, Docker, ElasticSearch, JUnit, Hibu (Karakun AG product), Thymeleaf, OpenIDConnect, Spring Security",
               "<a href='https://covalo.com/'>covalo.com</a>"
             ]
           }
@@ -362,7 +411,7 @@
           "content": {
             "title": "Bachelor Thesis: WorkbenchFX - FHNW",
             "__html": [
-              "Development of an open-source RCP framework for easy creation of module-based JavaFX applications",
+              "Development of an open-source RCP framework for the easy creation of module-based JavaFX applications",
               "Technologies: Java 8, JavaFX, Maven, GitHub, Travis CI, JUnit, Mockito, TestFX, Spock, Groovy, AsciiDoctor, Log4j, Material Design, SCSS",
               "<a href='https://github.com/dlsc-software-consulting-gmbh/WorkbenchFX'>WorkbenchFX</a>"
             ]
@@ -373,7 +422,7 @@
           "content": {
             "title": "Project 5: PreferencesFX - FHNW",
             "__html": [
-              "Development of an open-source JavaFX library for easy creation of settings dialogs",
+              "Development of an open-source JavaFX library for the easy creation of preference dialogs",
               "Technologies: Java 8, JavaFX, Gradle, Maven, GitHub, Travis CI, JUnit, Mockito, AsciiDoctor, Log4j",
               "<a href='https://github.com/dlsc-software-consulting-gmbh/PreferencesFX'>PreferencesFX</a>"
             ]

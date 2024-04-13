@@ -9,7 +9,13 @@
           "title": "Kurz und knapp",
           "content": {
             "__html": [
-              "Dank guter Auffassungsgabe kann ich komplexe Aufgaben schnell und selbständig bearbeiten. Durch die Zusammenarbeit mit anderen Entwicklern kann ich mich stets weiterentwickeln und Neues lernen. Als Fullstack Software Engineer mit React- und Spring kann man mich sehr gut einsetzen. Für neue Herausforderungen bin ich stets bereit."
+              "Dank meiner guten Auffassungsgabe kann ich komplexe Aufgaben schnell und selbständig bearbeiten.",
+              "Gute Zusammenarbeit mit anderen Teammitgliedern ist mir wichtig, denn eine gute Atmosphäre ist aus einer Sicht Schlüssel zum Erfolg.",
+              "Ausserdem kann ich mich dadurch weiterentwickeln und mehr lernen. Genau aus diesem Grund sind mir Entwicklungsprozesse wie Merge Requests, Retrospektiven und ab und an ein Teamevent sehr wichtig.",
+              "",
+              "In meiner aktuellen Firma konnte ich an vielen unterschiedlichen Projekten, mit unterschiedlichem Technologiestack mitwirken. Dadurch habe ich in kurzer Zeit sehr viel Erfahrung gesammelt und bin flexibel was neue Technologien/Projekte betrifft und vielseitig einsetzbar.",
+              "",
+              "Als Fullstack Software Engineer mit Fokus React/Spring kann man mich am besten einsetzen. Aber wie bereits gesagt: Für neue Herausforderungen bin ich immer bereit."
             ]
           }
         },
@@ -172,6 +178,17 @@
       "title": "Weiterbildungen und Zertifikate",
       "entries": [
         {
+          "title": "2024",
+          "content": {
+            "title": "Softwarearchitektur im Fokus",
+            "__html": [
+              "- Detailbeleuchtung von Schichten-, Onion- und Hexagon-Architekturen, was ihre Vor- und Nachteile sind und wann sie sich für ein Projekt anbieten.",
+              "- Wie man ArchUnit verwenden kann um Architekturentscheidungen durchzusetzen.",
+              "CodeCamp-Projekt, Interne Weiterbildung (Karakun AG)"
+            ]
+          }
+        },
+        {
           "title": "2023",
           "content": {
             "title": "Software Architektur (CPSAF iSAQB®)",
@@ -271,7 +288,14 @@
           "content": {
             "title": "Dreyfus Söhne & Cie AG, Basel",
             "__html": [
-              "Selbständige Wartung und Weiterentwicklung der banken-internen Applikationen. Externer Mitarbeiter und Teil des internen Teams",
+              "Selbständige Wartung und Weiterentwicklung der banken-internen Applikationen",
+              "Highlights:",
+              "- Umgang mit Legacy-Applikationen",
+              "- Schreiben von Batch Jobs",
+              "- Erweitern der bestehenden Datenbankstrukturen",
+              "- Requirements engineering und Zusammenarbeit mit dem Fachpersonal",
+              "- Migrationen und Versionsupgrades",
+              "Rolle: Unterstützung des banken-internen Teams als externer Mitarbeiter (fullstack)",
               "Technologien: JavaFX, Swing, IBM DB2"
             ]
           }
@@ -281,7 +305,11 @@
           "content": {
             "title": "eMWA - Kanton Aargau",
             "__html": [
-              "Neuentwicklung einer Applikation. Teil eines internen Teams für einen externen Kunden",
+              "Neuentwicklung der Applikation 'Elektronische Mehrwertabgabe' im Rahmen eines Digitalisierungsprojektes des Kantons Aargau",
+              "Highlights:",
+              "- Selbständiges Design und Implementation des Moduls, welches mit der Schnittstelle 'iGeko' kommuniziert",
+              "- Einarbeitung in eine neue API",
+              "Rolle: Unterstützung des Entwicklungsteams als Backend Engineer",
               "Technologien: React, Spring/Spring Boot, PostgresSQL, Docker, Typescript, Java"
             ]
           }
@@ -291,7 +319,10 @@
           "content": {
             "title": "BamoWeb - Kanton Aargau",
             "__html": [
-              "Neuentwicklung einer Applikation. Teil eines internen Teams für einen externen Kunden",
+              "Neuentwicklung der Applikation 'BamoWeb' im Rahmen eines Digitalisierungsprojektes des Kantons Aargau",
+              "Highlights:",
+              "- Schnelle Einarbeitung in das bestehende Projekt, sodass das Projekt fertig gestellt werden kann",
+              "Rolle: Unterstützung bei der Fertigstellung des Projektes als Teil des Entwicklungsteams (Fullstack Engineer)",
               "Technologien: React, Spring/Spring Boot, Docker, Microsoft SQL Server, Typescript, Java"
             ]
           }
@@ -301,7 +332,12 @@
           "content": {
             "title": "ePlanung - Kanton Aargau",
             "__html": [
-              "Lead Frontend-Engineer. Neuentwicklung einer Applikation. Teil eines 2-Personen internen Teams für einen externen Kunden",
+              "Neuentwicklung der Applikation 'ePlanung' im Rahmen eines Digitalisierungsprojektes des Kantons Aargau",
+              "Bis anhin wurden Baueingaben von Gemeinden und Kanton in Papierform verwaltet. Dies soll nun digital erfolgen. Die Applikation digitalisiert den gesamten Workflow und vereinfacht die Arbeit",
+              "Highlights:",
+              "- Selbständiges Design der Frontend-Architektur",
+              "- Als Teil eines 2er Teams hatte ich eine tragende Rolle mit viel Verantwortung",
+              "Rolle: Lead Frontend-Engineer als Teil eines 2-Personen Teams",
               "Technologien: React, Spring/Spring Boot, MongoDB, Docker, Typescript, Java"
             ]
           }
@@ -309,10 +345,15 @@
         {
           "title": "2021",
           "content": {
-            "title": "PharmaTalents.AI",
+            "title": "PharmaTalent.AI",
             "__html": [
-              "Lead Frontend-Engineer. Proof of Concept einer Neuentwicklung einer Applikation. Teil eines 2-Personen internen Teams für einen externen Kunden",
-              "Technologien: React, Spring/Spring Boot"
+              "Proof of Concept einer Neuentwicklung einer Applikation",
+              "Es soll möglich sein von einer umfassenden Datenquelle medizinische Artikel schnell und effizient zu filtern. Hierzu kommt die Karakun Software 'HIBU', sowie eine externe API, welche die entsprechenden Daten zur Verfügung stellt zum Einsatz",
+              "Highlights:",
+              "- Arbeit mit grossen Datensätzen übers Web",
+              "- Einarbeitung in eine neue API und Anbindung ebensolcher",
+              "Rolle: Fullstack Engineer mit Verantwortung fürs Frontend als Teil eines 2-Personen Teams",
+              "Technologien: React, Spring/Spring Boot, Hibu (Produkt der Karakun AG)"
             ]
           }
         },
@@ -321,7 +362,13 @@
           "content": {
             "title": "CVS engineering GmbH",
             "__html": [
-              "Automatische Klassifikation und Extraktion von Textinhalten bei Rechnungen. Teil eines internen Teams für einen externen Kunden",
+              "Automatische Klassifikation und Extraktion von Textinhalten bei Rechnungen",
+              "Um repetitive, manuelle Arbeit zu minimieren, soll von Auftragsbestätigungen und Rechnungen automatisch deren",
+              "Highlights:",
+              "- Neue Skriptsprache",
+              "- Regelbasierte Erkennung, Klassifikation und Extraktion von Informationen aus einem Dokument",
+              "- Tabellenerkennung",
+              "Rolle: Teil des Entwicklungsteams als Backend Engineer",
               "Technologien: Spring/Spring Boot, Apache UIMA, Hibu (Produkt der Karakun AG)"
             ]
           }
