@@ -1,92 +1,3983 @@
-<!-- WORK -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<section class="section" id="work">
-  <div class="container">
+  <title>Marco Sanfratello — Senior Software Engineer</title>
 
-    <div class="section-heading">
-      <div class="section-number">02 / Selected work</div>
+  <meta
+    name="description"
+    content="Marco Sanfratello — Senior Software Engineer focused on Java, Spring, React, software architecture and complex systems."
+  />
 
-      <div>
-        <h2 class="section-title">
-          Work that<br />
-          does the job.
-        </h2>
+  <meta name="theme-color" content="#06101f" />
 
-        <p class="section-intro">
-          A deliberately small selection of the kind of problems
-          I enjoy: turning ambiguity into useful products,
-          robust systems and interfaces with a point of view.
-        </p>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #050b15;
+      --bg-2: #081426;
+      --surface: rgba(13, 28, 49, 0.7);
+      --surface-solid: #0d1c31;
+
+      --blue: #338cff;
+      --blue-bright: #55b5ff;
+      --cyan: #4de5ff;
+      --violet: #8171ff;
+      --pink: #ed72d2;
+
+      --white: #f4f8ff;
+      --text: #dce7f6;
+      --muted: #8297b1;
+      --faint: #50647d;
+
+      --line: rgba(155, 195, 240, 0.13);
+      --line-strong: rgba(100, 180, 255, 0.32);
+
+      --max: 1180px;
+      --radius: 28px;
+
+      --ease: cubic-bezier(.2, .8, .2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 80% 5%,
+          rgba(51, 140, 255, .10),
+          transparent 34rem
+        ),
+        radial-gradient(
+          circle at 10% 55%,
+          rgba(129, 113, 255, .07),
+          transparent 34rem
+        ),
+        var(--bg);
+
+      font-family: "Manrope", sans-serif;
+    }
+
+    body::selection {
+      background: var(--blue);
+      color: white;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 44px), var(--max));
+      margin-inline: auto;
+    }
+
+    .mono {
+      font-family: "DM Mono", monospace;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--cyan);
+
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--cyan);
+    }
+
+    .section {
+      position: relative;
+      padding: 150px 0;
+    }
+
+    .section-title {
+      max-width: 820px;
+      margin-top: 20px;
+
+      color: var(--white);
+
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: .96;
+      letter-spacing: -.065em;
+    }
+
+    .section-intro {
+      max-width: 620px;
+      margin-top: 25px;
+
+      color: var(--muted);
+
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    /* ---------------------------------------
+       BACKGROUND
+    --------------------------------------- */
+
+    .background-grid {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+
+      opacity: .32;
+
+      background-image:
+        linear-gradient(
+          rgba(120, 170, 230, .025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(120, 170, 230, .025) 1px,
+          transparent 1px
+        );
+
+      background-size: 70px 70px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 85%
+        );
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+
+      pointer-events: none;
+
+      opacity: .025;
+
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    }
+
+    /* ---------------------------------------
+       NAV
+    --------------------------------------- */
+
+    .nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      z-index: 100;
+
+      width: min(calc(100% - 30px), 940px);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 9px 10px 9px 17px;
+
+      border: 1px solid var(--line);
+      border-radius: 999px;
+
+      background: rgba(5, 13, 25, .72);
+      backdrop-filter: blur(22px);
+
+      transform: translateX(-50%);
+
+      box-shadow:
+        0 20px 70px rgba(0, 0, 0, .25);
+
+      animation: nav-enter .8s var(--ease) both;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .logo-mark {
+      width: 29px;
+      height: 29px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 9px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--cyan),
+          var(--blue),
+          var(--violet)
+        );
+
+      color: white;
+
+      box-shadow:
+        0 0 30px rgba(51, 140, 255, .35);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 3px;
+    }
+
+    .nav-links a {
+      padding: 9px 13px;
+
+      color: var(--muted);
+
+      border-radius: 999px;
+
+      font-size: 12px;
+
+      transition:
+        color .2s ease,
+        background .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+      background: rgba(255,255,255,.06);
+    }
+
+    .nav-contact {
+      padding: 10px 16px;
+
+      border-radius: 999px;
+
+      background: white;
+      color: #07101d;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      transition:
+        transform .25s var(--ease),
+        box-shadow .25s var(--ease);
+    }
+
+    .nav-contact:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 10px 30px rgba(255,255,255,.16);
+    }
+
+    @keyframes nav-enter {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    /* ---------------------------------------
+       HERO
+    --------------------------------------- */
+
+    .hero {
+      position: relative;
+
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      padding: 140px 0 100px;
+    }
+
+    #architecture-canvas {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      z-index: 0;
+
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      z-index: 1;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--bg) 0%,
+          rgba(5, 11, 21, .84) 30%,
+          rgba(5, 11, 21, .12) 78%,
+          var(--bg) 100%
+        );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 760px;
+    }
+
+    .hero-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 12px;
+
+      border: 1px solid var(--line);
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.025);
+
+      color: var(--muted);
+
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+
+      animation:
+        reveal-up .8s .1s var(--ease) both;
+    }
+
+    .status-light {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #4df09c;
+
+      box-shadow:
+        0 0 14px #4df09c;
+
+      animation: status-pulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes status-pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .45;
+        transform: scale(.65);
+      }
+    }
+
+    .hero h1 {
+      margin-top: 28px;
+
+      color: var(--white);
+
+      font-size: clamp(62px, 10vw, 132px);
+      line-height: .83;
+      letter-spacing: -.08em;
+
+      animation:
+        reveal-up .9s .2s var(--ease) both;
+    }
+
+    .hero h1 .gradient {
+      background:
+        linear-gradient(
+          110deg,
+          #fff 5%,
+          #72cfff 38%,
+          #5d8dff 63%,
+          #b18cff 85%
+        );
+
+      background-size: 220% 220%;
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+
+      animation:
+        gradient-shift 9s ease infinite;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .hero-description {
+      max-width: 650px;
+
+      margin-top: 35px;
+
+      color: var(--muted);
+
+      font-size: 18px;
+      line-height: 1.75;
+
+      animation:
+        reveal-up .9s .35s var(--ease) both;
+    }
+
+    .hero-description strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-top: 34px;
+
+      animation:
+        reveal-up .9s .5s var(--ease) both;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 14px 19px;
+
+      border-radius: 13px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition:
+        transform .3s var(--ease),
+        box-shadow .3s var(--ease),
+        border-color .3s ease;
+    }
+
+    .button-primary {
+      background: white;
+      color: #07101d;
+
+      box-shadow:
+        0 10px 35px rgba(255,255,255,.06);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--line);
+
+      background: rgba(255,255,255,.025);
+
+      color: white;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary:hover {
+      box-shadow:
+        0 18px 50px rgba(255,255,255,.15);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+
+      margin-top: 60px;
+
+      animation:
+        reveal-up .9s .65s var(--ease) both;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hero-meta-label {
+      color: var(--faint);
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .hero-meta-value {
+      color: #a9bdd5;
+
+      font-size: 12px;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      z-index: 2;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--faint);
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+
+      transform: translateX(-50%);
+    }
+
+    .scroll-indicator::before {
+      content: "";
+
+      width: 30px;
+      height: 1px;
+
+      background: var(--faint);
+
+      animation:
+        scroll-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scroll-pulse {
+      0%, 100% {
+        transform: scaleX(.4);
+        transform-origin: left;
+      }
+
+      50% {
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes reveal-up {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---------------------------------------
+       SIGNAL STRIP
+    --------------------------------------- */
+
+    .signal-strip {
+      overflow: hidden;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+
+      background:
+        rgba(255,255,255,.012);
+    }
+
+    .signal-track {
+      width: max-content;
+
+      display: flex;
+      gap: 48px;
+
+      padding: 17px 0;
+
+      animation:
+        marquee 32s linear infinite;
+    }
+
+    .signal-track span {
+      color: #4e627a;
+
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .signal-track .signal-active {
+      color: var(--cyan);
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ---------------------------------------
+       PROFILE
+    --------------------------------------- */
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 90px;
+
+      margin-top: 75px;
+    }
+
+    .profile-statement {
+      font-size: clamp(31px, 4vw, 49px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+
+    .profile-statement .muted {
+      color: #43566e;
+    }
+
+    .profile-text {
+      margin-top: 28px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .principles {
+      display: grid;
+      gap: 12px;
+    }
+
+    .principle {
+      position: relative;
+
+      padding: 27px;
+
+      overflow: hidden;
+
+      border: 1px solid var(--line);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(20, 45, 75, .5),
+          rgba(9, 21, 37, .6)
+        );
+
+      transition:
+        transform .4s var(--ease),
+        border-color .4s ease;
+    }
+
+    .principle::after {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      top: -120px;
+      right: -70px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(51,140,255,.28),
+          transparent 68%
+        );
+
+      opacity: 0;
+
+      transition: opacity .4s ease;
+    }
+
+    .principle:hover {
+      transform: translateX(8px);
+
+      border-color: var(--line-strong);
+    }
+
+    .principle:hover::after {
+      opacity: 1;
+    }
+
+    .principle-number {
+      color: var(--cyan);
+
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+    }
+
+    .principle h3 {
+      margin-top: 18px;
+
+      color: white;
+
+      font-size: 20px;
+      letter-spacing: -.03em;
+    }
+
+    .principle p {
+      margin-top: 9px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* ---------------------------------------
+       ARCHITECTURE
+    --------------------------------------- */
+
+    .architecture-section {
+      overflow: hidden;
+    }
+
+    .architecture-board {
+      position: relative;
+
+      min-height: 580px;
+
+      margin-top: 75px;
+
+      overflow: hidden;
+
+      border: 1px solid var(--line);
+      border-radius: 30px;
+
+      background:
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(51,140,255,.07),
+          transparent 45%
+        ),
+        rgba(6, 16, 29, .65);
+    }
+
+    .architecture-board::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          rgba(80,140,210,.045) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(80,140,210,.045) 1px,
+          transparent 1px
+        );
+
+      background-size: 42px 42px;
+    }
+
+    .board-header {
+      position: absolute;
+      top: 24px;
+      left: 26px;
+      right: 26px;
+      z-index: 2;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      color: var(--faint);
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .board-status {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .board-status::before {
+      content: "";
+
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+
+      background: var(--cyan);
+
+      box-shadow:
+        0 0 10px var(--cyan);
+    }
+
+    .architecture-layers {
+      position: absolute;
+      inset: 90px 35px 35px;
+
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .architecture-layer {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+
+      padding: 0 25px;
+
+      border: 1px solid rgba(100,170,230,.09);
+      border-radius: 15px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(24,52,83,.32),
+          rgba(15,34,57,.12)
+        );
+
+      transition:
+        border-color .4s ease,
+        background .4s ease,
+        transform .4s var(--ease);
+    }
+
+    .architecture-layer:hover {
+      transform: translateX(6px);
+
+      border-color:
+        rgba(80,180,255,.28);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(24,65,105,.48),
+          rgba(15,34,57,.18)
+        );
+    }
+
+    .layer-label {
+      width: 145px;
+
+      color: var(--faint);
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .layer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .layer-node {
+      padding: 8px 11px;
+
+      border: 1px solid rgba(110,180,240,.12);
+      border-radius: 8px;
+
+      background: rgba(255,255,255,.025);
+
+      color: #a9bfd8;
+
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+
+      transition:
+        border-color .25s ease,
+        color .25s ease,
+        background .25s ease;
+    }
+
+    .layer-node:hover {
+      border-color: rgba(80,190,255,.4);
+
+      background: rgba(51,140,255,.08);
+
+      color: white;
+    }
+
+    .architecture-note {
+      position: absolute;
+      right: 26px;
+      bottom: 22px;
+
+      max-width: 300px;
+
+      color: #50647c;
+
+      font-size: 10px;
+      line-height: 1.5;
+
+      text-align: right;
+    }
+
+    /* ---------------------------------------
+       EXPERIENCE
+    --------------------------------------- */
+
+    .experience {
+      margin-top: 75px;
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 50px;
+
+      padding: 48px 0;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-date {
+      color: var(--cyan);
+
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+
+    .experience-role {
+      color: white;
+
+      font-size: 28px;
+      font-weight: 700;
+
+      letter-spacing: -.04em;
+    }
+
+    .experience-company {
+      margin-top: 6px;
+
+      color: var(--blue-bright);
+
+      font-size: 14px;
+    }
+
+    .experience-description {
+      max-width: 760px;
+
+      margin-top: 20px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .experience-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+
+      margin-top: 24px;
+    }
+
+    .highlight {
+      padding: 14px;
+
+      border-left: 2px solid rgba(51,140,255,.4);
+
+      background: rgba(255,255,255,.018);
+
+      color: #9eb2c9;
+
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* ---------------------------------------
+       PROJECTS
+    --------------------------------------- */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+
+      margin-top: 75px;
+    }
+
+    .project {
+      position: relative;
+
+      min-height: 440px;
+
+      padding: 28px;
+
+      overflow: hidden;
+
+      border: 1px solid var(--line);
+      border-radius: 27px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(17, 39, 66, .78),
+          rgba(7, 18, 32, .92)
+        );
+
+      transition:
+        transform .5s var(--ease),
+        border-color .5s ease,
+        box-shadow .5s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+
+      border-color: var(--line-strong);
+
+      box-shadow:
+        0 35px 100px rgba(0,0,0,.25);
+    }
+
+    .project::before {
+      content: "";
+
+      position: absolute;
+
+      width: 350px;
+      height: 350px;
+
+      top: -180px;
+      right: -100px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(51,140,255,.22),
+          transparent 68%
+        );
+
+      transition:
+        transform .7s var(--ease);
+    }
+
+    .project:hover::before {
+      transform: scale(1.3);
+    }
+
+    .project:nth-child(2)::before {
+      background:
+        radial-gradient(
+          circle,
+          rgba(129,113,255,.2),
+          transparent 68%
+        );
+    }
+
+    .project:nth-child(3)::before {
+      background:
+        radial-gradient(
+          circle,
+          rgba(77,229,255,.16),
+          transparent 68%
+        );
+    }
+
+    .project:nth-child(4)::before {
+      background:
+        radial-gradient(
+          circle,
+          rgba(237,114,210,.14),
+          transparent 68%
+        );
+    }
+
+    .project-top {
+      position: relative;
+      z-index: 1;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-index {
+      color: var(--faint);
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      letter-spacing: .1em;
+    }
+
+    .project-arrow {
+      width: 38px;
+      height: 38px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--line);
+      border-radius: 50%;
+
+      color: var(--muted);
+
+      transition:
+        transform .35s var(--ease),
+        background .35s ease,
+        color .35s ease;
+    }
+
+    .project:hover .project-arrow {
+      transform: rotate(45deg);
+
+      background: white;
+      color: #07101d;
+    }
+
+    .project-body {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
+    }
+
+    .project h3 {
+      color: white;
+
+      font-size: clamp(30px, 4vw, 47px);
+      line-height: .95;
+      letter-spacing: -.055em;
+    }
+
+    .project-role {
+      margin-top: 10px;
+
+      color: var(--blue-bright);
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .project-description {
+      max-width: 500px;
+
+      margin-top: 15px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 6px 9px;
+
+      border: 1px solid var(--line);
+      border-radius: 999px;
+
+      color: #91a7bf;
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+
+      background: rgba(0,0,0,.12);
+    }
+
+    /* ---------------------------------------
+       ENGINEERING PRACTICES
+    --------------------------------------- */
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+
+      margin-top: 70px;
+    }
+
+    .practice {
+      min-height: 240px;
+
+      padding: 25px;
+
+      border: 1px solid var(--line);
+      border-radius: 21px;
+
+      background:
+        rgba(255,255,255,.018);
+
+      transition:
+        transform .4s var(--ease),
+        background .4s ease,
+        border-color .4s ease;
+    }
+
+    .practice:hover {
+      transform: translateY(-6px);
+
+      background:
+        rgba(51,140,255,.045);
+
+      border-color:
+        rgba(80,170,255,.3);
+    }
+
+    .practice-icon {
+      width: 40px;
+      height: 40px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        rgba(51,140,255,.1);
+
+      color: var(--cyan);
+
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+    }
+
+    .practice h3 {
+      margin-top: 26px;
+
+      color: white;
+
+      font-size: 18px;
+      letter-spacing: -.025em;
+    }
+
+    .practice p {
+      margin-top: 10px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    /* ---------------------------------------
+       TALKS
+    --------------------------------------- */
+
+    .talks {
+      margin-top: 70px;
+    }
+
+    .talk {
+      display: grid;
+      grid-template-columns: 100px 1fr 40px;
+      gap: 30px;
+      align-items: center;
+
+      padding: 23px 0;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .talk:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .talk-year {
+      color: var(--cyan);
+
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+    }
+
+    .talk-title {
+      color: white;
+
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .talk-meta {
+      margin-top: 4px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    .talk-arrow {
+      color: var(--faint);
+    }
+
+    /* ---------------------------------------
+       PERSONAL
+    --------------------------------------- */
+
+    .personal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+
+      margin-top: 70px;
+    }
+
+    .personal-card {
+      min-height: 320px;
+
+      padding: 32px;
+
+      border: 1px solid var(--line);
+      border-radius: 27px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(18,40,67,.6),
+          rgba(8,19,33,.75)
+        );
+    }
+
+    .personal-card h3 {
+      margin-top: 18px;
+
+      color: white;
+
+      font-size: 27px;
+      letter-spacing: -.04em;
+    }
+
+    .personal-card p {
+      margin-top: 15px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .personal-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-top: 25px;
+    }
+
+    .personal-tag {
+      padding: 9px 12px;
+
+      border: 1px solid var(--line);
+      border-radius: 999px;
+
+      color: #9db1c8;
+
+      font-size: 11px;
+    }
+
+    /* ---------------------------------------
+       EDUCATION
+    --------------------------------------- */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+
+      margin-top: 70px;
+    }
+
+    .education-item {
+      padding-bottom: 27px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .education-item + .education-item {
+      margin-top: 27px;
+    }
+
+    .education-year {
+      color: var(--cyan);
+
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+    }
+
+    .education-item h3 {
+      margin-top: 10px;
+
+      color: white;
+
+      font-size: 18px;
+    }
+
+    .education-item p {
+      margin-top: 6px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* ---------------------------------------
+       CONTACT
+    --------------------------------------- */
+
+    .contact-section {
+      padding-bottom: 70px;
+    }
+
+    .contact-card {
+      position: relative;
+
+      padding: 85px 50px;
+
+      overflow: hidden;
+
+      border: 1px solid rgba(100,180,255,.2);
+      border-radius: 38px;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(77,229,255,.15),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #0b315c,
+          #172d62 55%,
+          #29204d
+        );
+
+      text-align: center;
+    }
+
+    .contact-card::before,
+    .contact-card::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      pointer-events: none;
+    }
+
+    .contact-card::before {
+      width: 500px;
+      height: 500px;
+
+      left: -250px;
+      bottom: -400px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(51,140,255,.25),
+          transparent 68%
+        );
+    }
+
+    .contact-card::after {
+      width: 400px;
+      height: 400px;
+
+      right: -180px;
+      top: -280px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(129,113,255,.22),
+          transparent 68%
+        );
+    }
+
+    .contact-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-card h2 {
+      margin-top: 17px;
+
+      color: white;
+
+      font-size: clamp(45px, 7vw, 92px);
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
+
+    .contact-card p {
+      max-width: 570px;
+
+      margin: 26px auto 0;
+
+      color: rgba(255,255,255,.67);
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .contact-email {
+      display: inline-flex;
+
+      margin-top: 30px;
+      padding: 16px 22px;
+
+      border-radius: 14px;
+
+      background: white;
+      color: #07111e;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      transition:
+        transform .3s var(--ease),
+        box-shadow .3s var(--ease);
+    }
+
+    .contact-email:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+    }
+
+    /* ---------------------------------------
+       FOOTER
+    --------------------------------------- */
+
+    footer {
+      padding: 0 0 45px;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding-top: 25px;
+
+      border-top: 1px solid var(--line);
+
+      color: #50657e;
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      transition: color .2s ease;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* ---------------------------------------
+       REVEAL
+    --------------------------------------- */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(35px);
+
+      transition:
+        opacity .8s var(--ease),
+        transform .8s var(--ease);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------------------------------------
+       RESPONSIVE
+    --------------------------------------- */
+
+    @media (max-width: 850px) {
+
+      .container {
+        width: min(calc(100% - 30px), var(--max));
+      }
+
+      .nav {
+        top: 9px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 92vh;
+      }
+
+      .hero h1 {
+        font-size: clamp(60px, 16vw, 100px);
+      }
+
+      .hero::after {
+        background:
+          linear-gradient(
+            90deg,
+            var(--bg) 0%,
+            rgba(5,11,21,.7) 65%,
+            var(--bg) 100%
+          );
+      }
+
+      .profile-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .practice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .architecture-board {
+        min-height: 620px;
+      }
+
+      .architecture-layers {
+        inset: 80px 18px 25px;
+      }
+
+      .layer-label {
+        width: 95px;
+      }
+
+      .experience-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .experience-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .personal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .talk {
+        grid-template-columns: 65px 1fr;
+      }
+
+      .talk-arrow {
+        display: none;
+      }
+
+      .contact-card {
+        padding: 65px 24px;
+        border-radius: 28px;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .section {
+        padding: 105px 0;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero-meta {
+        gap: 18px;
+      }
+
+      .architecture-board {
+        min-height: 680px;
+      }
+
+      .architecture-layers {
+        inset: 80px 12px 25px;
+      }
+
+      .architecture-layer {
+        display: block;
+
+        padding: 15px;
+      }
+
+      .layer-label {
+        width: auto;
+        margin-bottom: 10px;
+      }
+
+      .architecture-note {
+        display: none;
+      }
+
+      .project {
+        min-height: 430px;
+      }
+
+      .footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      #architecture-canvas {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background-grid"></div>
+  <div class="noise"></div>
+
+  <!-- ================================
+       NAVIGATION
+  ================================= -->
+
+  <nav class="nav">
+
+    <a href="#top" class="logo">
+      <span class="logo-mark">M</span>
+      <span>Marco.</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#profile">Profile</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#engineering">Engineering</a>
+    </div>
+
+    <a href="#contact" class="nav-contact">
+      Let's talk
+    </a>
+
+  </nav>
+
+
+  <!-- ================================
+       HERO
+  ================================= -->
+
+  <main id="top">
+
+    <section class="hero">
+
+      <canvas id="architecture-canvas"></canvas>
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="hero-status">
+            <span class="status-light"></span>
+            Senior Software Engineer · Basel
+          </div>
+
+          <h1>
+            I build
+            <span class="gradient">
+              systems
+            </span>
+            that last.
+          </h1>
+
+          <p class="hero-description">
+            I am <strong>Marco Sanfratello</strong>, a Senior
+            Software Engineer focused on
+            <strong>Java, Spring and React</strong>.
+            I enjoy taking on complex systems, making
+            architectural decisions and turning difficult
+            problems into software that remains
+            understandable years later.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#work"
+              class="button button-primary"
+            >
+              Explore my work
+              <span>↘</span>
+            </a>
+
+            <a
+              href="https://github.com/genron"
+              target="_blank"
+              rel="noopener"
+              class="button button-secondary"
+            >
+              GitHub ↗
+            </a>
+
+          </div>
+
+          <div class="hero-meta">
+
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">
+                Core
+              </span>
+
+              <span class="hero-meta-value">
+                Java · Spring · React
+              </span>
+            </div>
+
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">
+                Focus
+              </span>
+
+              <span class="hero-meta-value">
+                Architecture · Systems
+              </span>
+            </div>
+
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">
+                Currently
+              </span>
+
+              <span class="hero-meta-value">
+                Senior Software Engineer
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-    </div>
 
-    <div class="work-list">
+      <div class="scroll-indicator">
+        Scroll to explore
+      </div>
 
-      <article class="work-item">
-        <div class="work-number">01</div>
+    </section>
 
-        <div class="work-name">
-          Product interfaces
-        </div>
 
-        <div class="work-description">
-          UX · React · TypeScript<br />
-          Complex workflows translated into focused interfaces
-          with clear states and sensible defaults.
-        </div>
+    <!-- ================================
+         SIGNAL STRIP
+    ================================= -->
 
-        <div class="work-arrow" aria-hidden="true">↗</div>
-      </article>
+    <div class="signal-strip">
 
-      <article class="work-item">
-        <div class="work-number">02</div>
+      <div class="signal-track">
 
-        <div class="work-name">
-          Web platforms
-        </div>
+        <span>Java</span>
+        <span class="signal-active">Spring Boot</span>
+        <span>React</span>
+        <span>Software Architecture</span>
+        <span>Legacy Modernisation</span>
+        <span>Testing</span>
+        <span>Docker</span>
+        <span>CI/CD</span>
+        <span>IBM MQ</span>
+        <span>JavaFX</span>
+        <span>Open Source</span>
 
-        <div class="work-description">
-          Frontend · APIs · Performance<br />
-          Production web applications designed around
-          maintainable architecture.
-        </div>
+        <span>Java</span>
+        <span class="signal-active">Spring Boot</span>
+        <span>React</span>
+        <span>Software Architecture</span>
+        <span>Legacy Modernisation</span>
+        <span>Testing</span>
+        <span>Docker</span>
+        <span>CI/CD</span>
+        <span>IBM MQ</span>
+        <span>JavaFX</span>
+        <span>Open Source</span>
 
-        <div class="work-arrow" aria-hidden="true">↗</div>
-      </article>
-
-      <article class="work-item">
-        <div class="work-number">03</div>
-
-        <div class="work-name">
-          Systems &amp; data
-        </div>
-
-        <div class="work-description">
-          Backend · Integration · Cloud<br />
-          Services and data flows that remain observable,
-          understandable and dependable.
-        </div>
-
-        <div class="work-arrow" aria-hidden="true">↗</div>
-      </article>
-
-      <article class="work-item">
-        <div class="work-number">04</div>
-
-        <div class="work-name">
-          Experiments
-        </div>
-
-        <div class="work-description">
-          Three.js · Prototypes · R&amp;D<br />
-          Technical experiments exploring new interactions,
-          visual ideas and technologies.
-        </div>
-
-        <div class="work-arrow" aria-hidden="true">↗</div>
-      </article>
+      </div>
 
     </div>
 
-  </div>
-</section>
+
+    <!-- ================================
+         PROFILE
+    ================================= -->
+
+    <section
+      class="section"
+      id="profile"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="eyebrow">
+            01 / Profile
+          </span>
+
+          <h2 class="section-title">
+            Complex problems.
+            Clear systems.
+          </h2>
+
+          <p class="section-intro">
+            My work sits somewhere between software engineering,
+            architecture and problem solving. I care about making
+            software work today without making tomorrow's work
+            unnecessarily difficult.
+          </p>
+
+        </div>
+
+
+        <div class="profile-grid">
+
+          <div class="reveal">
+
+            <div class="profile-statement">
+              I do not just want software to
+              <span class="muted">
+                function.
+              </span>
+
+              I want it to remain
+              <span class="muted">
+                understandable.
+              </span>
+            </div>
+
+            <p class="profile-text">
+              Over the years I have worked on historically grown
+              applications as well as greenfield systems. This
+              combination taught me to appreciate both sides:
+              knowing when to improve what already exists and
+              knowing when a clean architectural boundary is
+              worth introducing.
+            </p>
+
+          </div>
+
+
+          <div class="principles">
+
+            <article class="principle reveal">
+
+              <span class="principle-number">
+                01 / OWNERSHIP
+              </span>
+
+              <h3>
+                Take responsibility for the difficult parts.
+              </h3>
+
+              <p>
+                Architecture, technical decisions and implementation
+                are connected. In my recent greenfield work I took
+                ownership of the overall architecture and combined
+                the architect role with project leadership.
+              </p>
+
+            </article>
+
+
+            <article class="principle reveal">
+
+              <span class="principle-number">
+                02 / MAINTAINABILITY
+              </span>
+
+              <h3>
+                Design for the engineer who comes later.
+              </h3>
+
+              <p>
+                Refactoring legacy systems, enforcing architectural
+                rules with ArchUnit and maintaining automated tests
+                are all parts of the same goal: software that can
+                continue to evolve safely.
+              </p>
+
+            </article>
+
+
+            <article class="principle reveal">
+
+              <span class="principle-number">
+                03 / EXCHANGE
+              </span>
+
+              <h3>
+                Good engineering gets better when shared.
+              </h3>
+
+              <p>
+                I regularly contribute to developer events and
+                presentations, sharing practical topics such as
+                architecture, testing, Lombok and development tools.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         ARCHITECTURE
+    ================================= -->
+
+    <section
+      class="section architecture-section"
+      id="architecture"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="eyebrow">
+            02 / Architecture
+          </span>
+
+          <h2 class="section-title">
+            Architecture is about
+            making change possible.
+          </h2>
+
+          <p class="section-intro">
+            My architectural work focuses on clear boundaries,
+            testability and the ability to replace individual
+            pieces without having to redesign the entire system.
+          </p>
+
+        </div>
+
+
+        <div class="architecture-board reveal">
+
+          <div class="board-header">
+
+            <span>
+              SYSTEM / ARCHITECTURE
+            </span>
+
+            <span class="board-status">
+              boundaries healthy
+            </span>
+
+          </div>
+
+
+          <div class="architecture-layers">
+
+            <div class="architecture-layer">
+
+              <div class="layer-label">
+                Interface
+              </div>
+
+              <div class="layer-content">
+
+                <span class="layer-node">
+                  React
+                </span>
+
+                <span class="layer-node">
+                  JavaFX
+                </span>
+
+                <span class="layer-node">
+                  REST
+                </span>
+
+                <span class="layer-node">
+                  Spring MVC
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="architecture-layer">
+
+              <div class="layer-label">
+                Application
+              </div>
+
+              <div class="layer-content">
+
+                <span class="layer-node">
+                  Use Cases
+                </span>
+
+                <span class="layer-node">
+                  Services
+                </span>
+
+                <span class="layer-node">
+                  Validation
+                </span>
+
+                <span class="layer-node">
+                  Spring Boot
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="architecture-layer">
+
+              <div class="layer-label">
+                Domain
+              </div>
+
+              <div class="layer-content">
+
+                <span class="layer-node">
+                  Business Rules
+                </span>
+
+                <span class="layer-node">
+                  Domain Model
+                </span>
+
+                <span class="layer-node">
+                  Interfaces
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="architecture-layer">
+
+              <div class="layer-label">
+                Infrastructure
+              </div>
+
+              <div class="layer-content">
+
+                <span class="layer-node">
+                  IBM MQ
+                </span>
+
+                <span class="layer-node">
+                  Hibernate
+                </span>
+
+                <span class="layer-node">
+                  H2
+                </span>
+
+                <span class="layer-node">
+                  Docker
+                </span>
+
+                <span class="layer-node">
+                  External APIs
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="architecture-note">
+            Layered · Onion · Hexagonal
+            <br />
+            Architecture enforced with automated rules
+            where appropriate.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         EXPERIENCE
+    ================================= -->
+
+    <section
+      class="section"
+      id="experience"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="eyebrow">
+            03 / Experience
+          </span>
+
+          <h2 class="section-title">
+            From fullstack delivery
+            to architectural ownership.
+          </h2>
+
+        </div>
+
+
+        <div class="experience">
+
+
+          <article class="experience-item reveal">
+
+            <div class="experience-date">
+              04 / 2025
+              <br />
+              Present
+            </div>
+
+            <div>
+
+              <h3 class="experience-role">
+                Senior Software Engineer
+              </h3>
+
+              <div class="experience-company">
+                Dreyfus Söhne & Cie AG, Banquiers · Basel
+              </div>
+
+              <p class="experience-description">
+                Development and modernisation of Java applications
+                in a financial environment. Work spans JavaFX,
+                Swing, Spring Boot, messaging, batch processing,
+                database integration and automated quality
+                processes.
+              </p>
+
+              <div class="experience-highlights">
+
+                <div class="highlight">
+                  Architect and project lead for a greenfield
+                  financial messaging system.
+                </div>
+
+                <div class="highlight">
+                  Designed an abstraction layer for an initially
+                  undefined external integration.
+                </div>
+
+                <div class="highlight">
+                  Spring Integration and IBM MQ for financial
+                  messaging workflows.
+                </div>
+
+                <div class="highlight">
+                  Architectural testing with ArchUnit and
+                  automated pipelines with Jenkins.
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="experience-item reveal">
+
+            <div class="experience-date">
+              2023
+              <br />
+              2024
+            </div>
+
+            <div>
+
+              <h3 class="experience-role">
+                Fullstack Software Engineer
+              </h3>
+
+              <div class="experience-company">
+                Dreyfus Söhne & Cie AG, Banquiers · Basel
+              </div>
+
+              <p class="experience-description">
+                Independent maintenance and further development
+                of internal banking applications. Fullstack work
+                across legacy systems, batch jobs, databases,
+                migrations and requirements engineering.
+              </p>
+
+              <div class="experience-highlights">
+
+                <div class="highlight">
+                  Independent maintenance of complex internal
+                  banking applications.
+                </div>
+
+                <div class="highlight">
+                  Legacy application development and refactoring.
+                </div>
+
+                <div class="highlight">
+                  Database extensions and migrations.
+                </div>
+
+                <div class="highlight">
+                  Direct collaboration with business specialists.
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="experience-item reveal">
+
+            <div class="experience-date">
+              2019
+              <br />
+              2023
+            </div>
+
+            <div>
+
+              <h3 class="experience-role">
+                Fullstack Software Engineer
+              </h3>
+
+              <div class="experience-company">
+                Karakun AG · Various client projects
+              </div>
+
+              <p class="experience-description">
+                Development of web applications and proof of
+                concepts across public-sector, financial and
+                enterprise environments.
+              </p>
+
+              <div class="experience-highlights">
+
+                <div class="highlight">
+                  React and Spring Boot fullstack development.
+                </div>
+
+                <div class="highlight">
+                  Frontend architecture for a two-person team
+                  on ePlanung.
+                </div>
+
+                <div class="highlight">
+                  APIs, Docker, PostgreSQL, MongoDB and Elasticsearch.
+                </div>
+
+                <div class="highlight">
+                  Work across Angular, Vaadin, Node.js and Java.
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         PROJECTS
+    ================================= -->
+
+    <section
+      class="section"
+      id="work"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="eyebrow">
+            04 / Selected work
+          </span>
+
+          <h2 class="section-title">
+            Systems I have shaped.
+          </h2>
+
+          <p class="section-intro">
+            A selection of projects that represent different
+            sides of my engineering experience: architecture,
+            modernisation, frontend ownership and open source.
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <a
+            class="project reveal"
+            href="#"
+          >
+
+            <div class="project-top">
+
+              <span class="project-index">
+                01 / 2025 — PRESENT
+              </span>
+
+              <span class="project-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>
+                Financial
+                Messaging
+              </h3>
+
+              <div class="project-role">
+                Architect · Project Lead · Senior Engineer
+              </div>
+
+              <p class="project-description">
+                Central application for inbound and outbound
+                financial messaging. Designed the overall
+                architecture, integration boundaries and
+                processing model.
+              </p>
+
+              <div class="tags">
+
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">IBM MQ</span>
+                <span class="tag">ISO 20022</span>
+                <span class="tag">ArchUnit</span>
+                <span class="tag">Docker</span>
+
+              </div>
+
+            </div>
+
+          </a>
+
+
+          <article class="project reveal">
+
+            <div class="project-top">
+
+              <span class="project-index">
+                02 / LEGACY MODERNISATION
+              </span>
+
+              <span class="project-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>
+                MROS
+              </h3>
+
+              <div class="project-role">
+                Senior Software Engineer
+              </div>
+
+              <p class="project-description">
+                Refactoring and gradual modernisation of a
+                historically grown anti-money-laundering
+                reporting application, including regression
+                testing, XML validation and simplification
+                of DTO and mapping structures.
+              </p>
+
+              <div class="tags">
+
+                <span class="tag">Java</span>
+                <span class="tag">JavaFX</span>
+                <span class="tag">Swing</span>
+                <span class="tag">Hibernate</span>
+                <span class="tag">SQL</span>
+                <span class="tag">XML</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="project reveal">
+
+            <div class="project-top">
+
+              <span class="project-index">
+                03 / 2021 — 2023
+              </span>
+
+              <span class="project-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>
+                ePlanung
+              </h3>
+
+              <div class="project-role">
+                Lead Frontend Engineer
+              </div>
+
+              <p class="project-description">
+                Digitalisation of the building submission
+                workflow for municipalities and the canton.
+                As part of a two-person team, I independently
+                designed the frontend architecture and carried
+                significant responsibility for delivery.
+              </p>
+
+              <div class="tags">
+
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Docker</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <a
+            class="project reveal"
+            href="https://github.com/genron/workbenchfx"
+            target="_blank"
+            rel="noopener"
+          >
+
+            <div class="project-top">
+
+              <span class="project-index">
+                04 / 2018
+              </span>
+
+              <span class="project-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <div class="project-body">
+
+              <h3>
+                WorkbenchFX
+              </h3>
+
+              <div class="project-role">
+                Bachelor Thesis · Open Source
+              </div>
+
+              <p class="project-description">
+                Development of an open-source RCP framework
+                for creating modular JavaFX applications.
+                The project became part of my academic work
+                and later a subject for talks and workshops.
+              </p>
+
+              <div class="tags">
+
+                <span class="tag">Java</span>
+                <span class="tag">JavaFX</span>
+                <span class="tag">Maven</span>
+                <span class="tag">JUnit</span>
+                <span class="tag">TestFX</span>
+                <span class="tag">Open Source</span>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         ENGINEERING
+    ================================= -->
+
+    <section
+      class="section"
+      id="engineering"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="eyebrow">
+            05 / Engineering
+          </span>
+
+          <h2 class="section-title">
+            Quality is part of
+            the architecture.
+          </h2>
+
+          <p class="section-intro">
+            Architecture without feedback eventually becomes
+            documentation. I prefer engineering practices that
+            continuously verify whether the system still behaves
+            according to its intended design.
+          </p>
+
+        </div>
+
+
+        <div class="practice-grid">
+
+
+          <article class="practice reveal">
+
+            <div class="practice-icon">
+              MR
+            </div>
+
+            <h3>
+              Code Review
+            </h3>
+
+            <p>
+              Mandatory merge requests, protected main branches
+              and technical discussion before changes become part
+              of the shared system.
+            </p>
+
+          </article>
+
+
+          <article class="practice reveal">
+
+            <div class="practice-icon">
+              T
+            </div>
+
+            <h3>
+              Automated Testing
+            </h3>
+
+            <p>
+              JUnit, Mockito, Spock, TestFX and integration testing
+              used to create confidence while changing complex
+              systems.
+            </p>
+
+          </article>
+
+
+          <article class="practice reveal">
+
+            <div class="practice-icon">
+              A
+            </div>
+
+            <h3>
+              Architectural Rules
+            </h3>
+
+            <p>
+              ArchUnit makes architectural decisions executable,
+              helping prevent boundaries from slowly disappearing
+              as a codebase evolves.
+            </p>
+
+          </article>
+
+
+          <article class="practice reveal">
+
+            <div class="practice-icon">
+              CI
+            </div>
+
+            <h3>
+              Continuous Integration
+            </h3>
+
+            <p>
+              Jenkins, Maven, Gradle and automated builds provide
+              fast feedback and keep the path from source code to
+              verified software repeatable.
+            </p>
+
+          </article>
+
+
+          <article class="practice reveal">
+
+            <div class="practice-icon">
+              SQ
+            </div>
+
+            <h3>
+              Code Quality
+            </h3>
+
+            <p>
+              SonarQube, coverage and static analysis complement
+              human review with continuous signals about the health
+              of a system.
+            </p>
+
+          </article>
+
+
+          <article class="practice reveal">
+
+            <div class="practice-icon">
+              AI
+            </div>
+
+            <h3>
+              AI-assisted Development
+            </h3>
+
+            <p>
+              I follow AI-assisted software development closely
+              and use AI deliberately as a supporting tool while
+              keeping engineering judgement with the developer.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         TALKS
+    ================================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="eyebrow">
+            06 / Knowledge exchange
+          </span>
+
+          <h2 class="section-title">
+            Engineering should
+            be shared.
+          </h2>
+
+        </div>
+
+
+        <div class="talks">
+
+
+          <div class="talk reveal">
+
+            <span class="talk-year">
+              2025 →
+            </span>
+
+            <div>
+
+              <div class="talk-title">
+                Developer Get-together
+              </div>
+
+              <div class="talk-meta">
+                Regular presentations at Dreyfus · ArchUnit ·
+                Lombok · Development tools
+              </div>
+
+            </div>
+
+            <span class="talk-arrow">
+              ↗
+            </span>
+
+          </div>
+
+
+          <div class="talk reveal">
+
+            <span class="talk-year">
+              2019 → 2020
+            </span>
+
+            <div>
+
+              <div class="talk-title">
+                WorkbenchFX
+              </div>
+
+              <div class="talk-meta">
+                Guest lectures at FHNW · Introduction and
+                hands-on workshop
+              </div>
+
+            </div>
+
+            <span class="talk-arrow">
+              ↗
+            </span>
+
+          </div>
+
+
+          <div class="talk reveal">
+
+            <span class="talk-year">
+              2018
+            </span>
+
+            <div>
+
+              <div class="talk-title">
+                PreferencesFX & WorkbenchFX
+              </div>
+
+              <div class="talk-meta">
+                JavaFX Days · Zurich
+              </div>
+
+            </div>
+
+            <span class="talk-arrow">
+              ↗
+            </span>
+
+          </div>
+
+
+          <div class="talk reveal">
+
+            <span class="talk-year">
+              2026
+            </span>
+
+            <div>
+
+              <div class="talk-title">
+                Devoxx
+              </div>
+
+              <div class="talk-meta">
+                Belgium · Oslo · Workshop: Vibe Coding with AI
+              </div>
+
+            </div>
+
+            <span class="talk-arrow">
+              ↗
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         PERSONAL
+    ================================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="eyebrow">
+            07 / Beyond code
+          </span>
+
+          <h2 class="section-title">
+            There is more to
+            engineering than code.
+          </h2>
+
+        </div>
+
+
+        <div class="personal-grid">
+
+
+          <article class="personal-card reveal">
+
+            <span class="eyebrow">
+              Outside
+            </span>
+
+            <h3>
+              Move. Explore. Make.
+            </h3>
+
+            <p>
+              When I am not working on software, I like activities
+              that provide a different kind of feedback loop:
+              swimming, running and hiking.
+            </p>
+
+            <div class="personal-tags">
+
+              <span class="personal-tag">
+                Swimming
+              </span>
+
+              <span class="personal-tag">
+                Running
+              </span>
+
+              <span class="personal-tag">
+                Hiking
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="personal-card reveal">
+
+            <span class="eyebrow">
+              Creative side
+            </span>
+
+            <h3>
+              Build worlds.
+            </h3>
+
+            <p>
+              Board games, video games and drawing occupy the
+              other side of the spectrum: systems, interaction,
+              visual thinking and imagination without a compiler
+              involved.
+            </p>
+
+            <div class="personal-tags">
+
+              <span class="personal-tag">
+                Board Games
+              </span>
+
+              <span class="personal-tag">
+                Video Games
+              </span>
+
+              <span class="personal-tag">
+                Drawing
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         EDUCATION
+    ================================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="eyebrow">
+            08 / Background
+          </span>
+
+          <h2 class="section-title">
+            A slightly unusual
+            route into software.
+          </h2>
+
+        </div>
+
+
+        <div class="education-grid">
+
+          <div>
+
+            <div class="education-item reveal">
+
+              <div class="education-year">
+                2015 — 2019
+              </div>
+
+              <h3>
+                Bachelor of Science in Computer Science
+              </h3>
+
+              <p>
+                Specialisation in Design and Management
+                (iCompetence) · FHNW
+              </p>
+
+            </div>
+
+
+            <div class="education-item reveal">
+
+              <div class="education-year">
+                Before 2015
+              </div>
+
+              <h3>
+                Polymechanic EFZ
+              </h3>
+
+              <p>
+                Swiss Federal Diploma of Vocational
+                Education and Training
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <div class="education-item reveal">
+
+              <div class="education-year">
+                2024
+              </div>
+
+              <h3>
+                Software Architecture in Focus
+              </h3>
+
+              <p>
+                Layered, Onion and Hexagonal Architecture,
+                architectural trade-offs and ArchUnit.
+              </p>
+
+            </div>
+
+
+            <div class="education-item reveal">
+
+              <div class="education-year">
+                2023
+              </div>
+
+              <h3>
+                Software Architecture · iSAQB Foundation
+              </h3>
+
+              <p>
+                CPSAF workshop · Certified Professional for
+                Software Architecture Foundation Level.
+              </p>
+
+            </div>
+
+
+            <div class="education-item reveal">
+
+              <div class="education-year">
+                2026
+              </div>
+
+              <h3>
+                Banking & Finance Essentials
+              </h3>
+
+              <p>
+                CYP · Examination passed February 2026.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================
+         CONTACT
+    ================================= -->
+
+    <section
+      class="section contact-section"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="contact-card reveal">
+
+          <div class="contact-content">
+
+            <span class="eyebrow">
+              09 / Contact
+            </span>
+
+            <h2>
+              Let's build
+              something
+              meaningful.
+            </h2>
+
+            <p>
+              Interested in software architecture, complex
+              systems, Java, Spring, React or simply a difficult
+              engineering problem? I am always interested in
+              exchanging ideas.
+            </p>
+
+            <a
+              href="mailto:sanfratello.m@gmail.com"
+              class="contact-email"
+            >
+              sanfratello.m@gmail.com ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================================
+       FOOTER
+  ================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer">
+
+        <span>
+          © 2026 Marco Sanfratello
+        </span>
+
+        <div class="footer-links">
+
+          <a
+            href="https://github.com/genron"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+
+          <a href="#top">
+            Back to top ↑
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================================
+       THREE.JS
+  ================================= -->
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+  ></script>
+
+
+  <script>
+
+    /*
+     * ---------------------------------------------------------
+     * THREE.JS — ARCHITECTURE GRAPH
+     *
+     * The visual starts as a connected system of nodes.
+     * Nodes slowly orbit and react to the mouse.
+     * The idea is intentionally closer to a software architecture
+     * graph than to a generic 3D object.
+     * ---------------------------------------------------------
+     */
+
+    const canvas =
+      document.getElementById(
+        "architecture-canvas"
+      );
+
+    const scene =
+      new THREE.Scene();
+
+    const camera =
+      new THREE.PerspectiveCamera(
+        52,
+        window.innerWidth /
+          window.innerHeight,
+        .1,
+        100
+      );
+
+    camera.position.z = 8;
+
+
+    const renderer =
+      new THREE.WebGLRenderer({
+        canvas,
+        alpha: true,
+        antialias: true
+      });
+
+    renderer.setPixelRatio(
+      Math.min(
+        window.devicePixelRatio,
+        2
+      )
+    );
+
+    renderer.setSize(
+      window.innerWidth,
+      window.innerHeight
+    );
+
+
+    /*
+     * Node positions
+     */
+
+    const nodePositions = [
+
+      [-1.8, 1.4, 0],
+      [-.6, 1.8, .4],
+      [.7, 1.3, -.3],
+      [2.0, 1.7, .2],
+
+      [-2.1, .2, -.4],
+      [-.8, .35, .2],
+      [.4, .1, -.2],
+      [1.7, .35, .3],
+
+      [-1.7, -1.2, .2],
+      [-.4, -1.0, -.3],
+      [.8, -1.3, .2],
+      [2.0, -.8, -.2],
+
+      [-.1, 2.7, -.5],
+      [.2, -2.2, .4]
+
+    ];
+
+
+    /*
+     * Nodes
+     */
+
+    const nodeGeometry =
+      new THREE.SphereGeometry(
+        .055,
+        12,
+        12
+      );
+
+    const nodeMaterial =
+      new THREE.MeshBasicMaterial({
+        color: 0x55b5ff,
+        transparent: true,
+        opacity: .8
+      });
+
+
+    const nodes = [];
+
+
+    nodePositions.forEach(
+      (position) => {
+
+        const node =
+          new THREE.Mesh(
+            nodeGeometry,
+            nodeMaterial.clone()
+          );
+
+        node.position.set(
+          position[0],
+          position[1],
+          position[2]
+        );
+
+        scene.add(node);
+
+        nodes.push(node);
+
+      }
+    );
+
+
+    /*
+     * Connections
+     */
+
+    const connectionMaterial =
+      new THREE.LineBasicMaterial({
+        color: 0x338cff,
+        transparent: true,
+        opacity: .13
+      });
+
+
+    function connect(
+      a,
+      b
+    ) {
+
+      const geometry =
+        new THREE.BufferGeometry();
+
+      geometry.setFromPoints([
+        nodes[a].position,
+        nodes[b].position
+      ]);
+
+      const line =
+        new THREE.Line(
+          geometry,
+          connectionMaterial
+        );
+
+      scene.add(line);
+
+    }
+
+
+    const connections = [
+
+      [0,1],
+      [0,4],
+      [1,2],
+      [1,5],
+      [1,12],
+
+      [2,3],
+      [2,6],
+
+      [3,7],
+
+      [4,5],
+      [4,8],
+
+      [5,6],
+      [5,9],
+
+      [6,7],
+      [6,10],
+
+      [7,11],
+
+      [8,9],
+      [9,10],
+      [10,11],
+
+      [9,13],
+      [10,13],
+
+      [5,12],
+      [6,12],
+
+      [8,13],
+      [11,13]
+
+    ];
+
+
+    connections.forEach(
+      pair => connect(
+        pair[0],
+        pair[1]
+      )
+    );
+
+
+    /*
+     * Floating architectural planes
+     */
+
+    const planeGeometry =
+      new THREE.PlaneGeometry(
+        3.6,
+        2.1
+      );
+
+    const planeMaterial =
+      new THREE.MeshBasicMaterial({
+        color: 0x338cff,
+        transparent: true,
+        opacity: .018,
+        side: THREE.DoubleSide
+      });
+
+    const plane =
+      new THREE.Mesh(
+        planeGeometry,
+        planeMaterial
+      );
+
+    plane.position.set(
+      1.5,
+      .3,
+      -.8
+    );
+
+    plane.rotation.y = -.5;
+
+    scene.add(plane);
+
+
+    /*
+     * Background particles
+     */
+
+    const particleCount = 650;
+
+    const particlePositions =
+      new Float32Array(
+        particleCount * 3
+      );
+
+    for (
+      let i = 0;
+      i < particleCount;
+      i++
+    ) {
+
+      particlePositions[i * 3] =
+        (Math.random() - .5) * 10;
+
+      particlePositions[i * 3 + 1] =
+        (Math.random() - .5) * 7;
+
+      particlePositions[i * 3 + 2] =
+        (Math.random() - .5) * 7;
+
+    }
+
+
+    const particleGeometry =
+      new THREE.BufferGeometry();
+
+    particleGeometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(
+        particlePositions,
+        3
+      )
+    );
+
+
+    const particleMaterial =
+      new THREE.PointsMaterial({
+        color: 0x3d9dff,
+        size: .012,
+        transparent: true,
+        opacity: .35
+      });
+
+
+    const particles =
+      new THREE.Points(
+        particleGeometry,
+        particleMaterial
+      );
+
+    scene.add(particles);
+
+
+    /*
+     * Mouse movement
+     */
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let targetX = 0;
+    let targetY = 0;
+
+
+    window.addEventListener(
+      "mousemove",
+      event => {
+
+        targetX =
+          (event.clientX /
+            window.innerWidth -
+            .5);
+
+        targetY =
+          (event.clientY /
+            window.innerHeight -
+            .5);
+
+      }
+    );
+
+
+    /*
+     * Animation
+     */
+
+    const clock =
+      new THREE.Clock();
+
+
+    function animate() {
+
+      const time =
+        clock.getElapsedTime();
+
+
+      mouseX +=
+        (targetX - mouseX) * .025;
+
+      mouseY +=
+        (targetY - mouseY) * .025;
+
+
+      scene.rotation.y =
+        mouseX * .12;
+
+      scene.rotation.x =
+        mouseY * .05;
+
+
+      particles.rotation.y =
+        time * .008;
+
+      particles.rotation.x =
+        Math.sin(time * .12) * .015;
+
+
+      nodes.forEach(
+        (node, index) => {
+
+          node.position.z +=
+            Math.sin(
+              time * .6 +
+              index
+            ) * .0006;
+
+        }
+      );
+
+
+      plane.rotation.z =
+        Math.sin(time * .2) * .04;
+
+
+      renderer.render(
+        scene,
+        camera
+      );
+
+
+      requestAnimationFrame(
+        animate
+      );
+
+    }
+
+
+    animate();
+
+
+    /*
+     * Resize
+     */
+
+    window.addEventListener(
+      "resize",
+      () => {
+
+        camera.aspect =
+          window.innerWidth /
+          window.innerHeight;
+
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(
+          window.innerWidth,
+          window.innerHeight
+        );
+
+      }
+    );
+
+
+    /*
+     * ---------------------------------------------------------
+     * SCROLL REVEALS
+     * ---------------------------------------------------------
+     */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(
+            entry => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+                revealObserver.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: .12
+        }
+      );
+
+
+    revealElements.forEach(
+      element =>
+        revealObserver.observe(
+          element
+        )
+    );
+
+
+    /*
+     * ---------------------------------------------------------
+     * PROJECT HOVER DEPTH
+     * ---------------------------------------------------------
+     */
+
+    document
+      .querySelectorAll(".project")
+      .forEach(project => {
+
+        project.addEventListener(
+          "mousemove",
+          event => {
+
+            const rect =
+              project.getBoundingClientRect();
+
+            const x =
+              event.clientX -
+              rect.left;
+
+            const y =
+              event.clientY -
+              rect.top;
+
+            const rotateY =
+              ((x / rect.width) - .5) * 3;
+
+            const rotateX =
+              ((y / rect.height) - .5) * -3;
+
+            project.style.transform =
+              `
+                translateY(-8px)
+                perspective(900px)
+                rotateX(${rotateX}deg)
+                rotateY(${rotateY}deg)
+              `;
+
+          }
+        );
+
+
+        project.addEventListener(
+          "mouseleave",
+          () => {
+
+            project.style.transform =
+              "";
+
+          }
+        );
+
+      });
+
+
+    /*
+     * ---------------------------------------------------------
+     * MAGNETIC BUTTONS
+     * ---------------------------------------------------------
+     */
+
+    document
+      .querySelectorAll(
+        ".button, .nav-contact, .contact-email"
+      )
+      .forEach(button => {
+
+        button.addEventListener(
+          "mousemove",
+          event => {
+
+            const rect =
+              button.getBoundingClientRect();
+
+            const x =
+              event.clientX -
+              rect.left -
+              rect.width / 2;
+
+            const y =
+              event.clientY -
+              rect.top -
+              rect.height / 2;
+
+            button.style.transform =
+              `
+                translate(
+                  ${x * .08}px,
+                  ${y * .08}px
+                )
+              `;
+
+          }
+        );
+
+
+        button.addEventListener(
+          "mouseleave",
+          () => {
+
+            button.style.transform =
+              "";
+
+          }
+        );
+
+      });
+
+
+    /*
+     * ---------------------------------------------------------
+     * HERO PARALLAX
+     * ---------------------------------------------------------
+     */
+
+    const hero =
+      document.querySelector(".hero");
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        const scroll =
+          window.scrollY;
+
+        if (scroll < window.innerHeight) {
+
+          hero.style.setProperty(
+            "--hero-offset",
+            `${scroll * .12}px`
+          );
+
+        }
+
+      },
+      {
+        passive: true
+      }
+    );
+
+  </script>
+
+</body>
+</html>
